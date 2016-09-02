@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Sindicon.iml" filepath="$PROJECT_DIR$/.idea/modules/Sindicon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Sindicon_main.iml" filepath="$PROJECT_DIR$/.idea/modules/Sindicon_main.iml" group="Sindicon" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Sindicon_test.iml" filepath="$PROJECT_DIR$/.idea/modules/Sindicon_test.iml" group="Sindicon" />
+    </modules>
+  </component>
+</project>
