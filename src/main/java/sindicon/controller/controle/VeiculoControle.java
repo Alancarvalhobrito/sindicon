@@ -8,48 +8,48 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import sindicon.model.persistencia.entidade.Acesso;
-import sindicon.model.servico.AcessoServico;
+import sindicon.model.persistencia.entidade.Veiculo;
+import sindicon.model.servico.VeiculoServico;
 
 /**
  * Created by Thiago on 08/10/2016.
  */
 @RestController
-@RequestMapping("/acesso")
-public class AcessoControle {
+@RequestMapping("/veiculo")
+public class VeiculoControle {
     @Autowired
-    AcessoServico acessoServico;
+    VeiculoServico veiculoServico;
 
-    //GET
+    //GET(Accesses)
     @RequestMapping(method = RequestMethod.GET)
-    public Iterable<Acesso> get() {
-        return acessoServico.consultarAcessos();
+    public Iterable<Veiculo> get() {
+        return veiculoServico.consultarVeiculos();
     }
 
-    //Post
+    //Post(Accesses)
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> post(@RequestBody Acesso acesso) {
-        acessoServico.inserirAcesso(acesso);
+    public ResponseEntity<?> post(@RequestBody Veiculo veiculo) {
+        veiculoServico.inserirVeiculo(veiculo);
         HttpHeaders httpHeaders = new HttpHeaders();
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
     }
 
-    //PUT
+    //PUT(Accesses)
     @RequestMapping(method = RequestMethod.PUT)
-    public ResponseEntity<?> put(@RequestBody Acesso acesso) {
+    public ResponseEntity<?> put(@RequestBody Veiculo veiculo) {
         HttpHeaders httpHeaders = new HttpHeaders();
         try {
-            acessoServico.atualizarAcesso(acesso);
+            veiculoServico.atualizarVeiculo(veiculo);
         } catch (Exception e) {
             return new ResponseEntity<>(null, httpHeaders, HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
     }
 
-    //DELETE
+    //DELETE(Accesses)
     @RequestMapping(method = RequestMethod.DELETE)
-    public ResponseEntity<?> delete(@RequestBody Acesso acesso) {
-        acessoServico.apagarAcesso(acesso);
+    public ResponseEntity<?> delete(@RequestBody Veiculo veiculo) {
+        veiculoServico.apagarVeiculo(veiculo);
         HttpHeaders httpHeaders = new HttpHeaders();
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.OK);
     }

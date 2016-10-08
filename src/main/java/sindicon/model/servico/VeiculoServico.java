@@ -13,17 +13,17 @@ public class VeiculoServico {
     @Autowired
     VeiculoRepositorio veiculoRepositorio;
 
-    //GET(Accesses)
-    public Iterable<Veiculo> consultarVeiculo() {
+    //GET
+    public Iterable<Veiculo> consultarVeiculos() {
         return veiculoRepositorio.findAll();
     }
 
-    //Post(Accesses)
+    //Post
     public void inserirVeiculo(Veiculo veiculo) {
         veiculoRepositorio.save(veiculo);
     }
 
-    //PUT(Accesses)
+    //PUT
     public void atualizarVeiculo(Veiculo veiculo) throws Exception {
         if (veiculo.getIdVeiculo() == null) {
             throw new Exception("Não foi possível atualizar um veiculo com Id nulo.");
@@ -31,7 +31,7 @@ public class VeiculoServico {
         veiculoRepositorio.save(veiculo);
     }
 
-    //DELETE(Accesses)
+    //DELETE
     public void apagarVeiculo(Veiculo veiculo) {
         veiculoRepositorio.delete(veiculo);
     }

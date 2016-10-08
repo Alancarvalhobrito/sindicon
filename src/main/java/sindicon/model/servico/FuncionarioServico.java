@@ -13,18 +13,18 @@ public class FuncionarioServico {
     @Autowired
     FuncionarioRepositorio funcionarioRepositorio;
 
-    //GET(Accesses)
-    public Iterable<Funcionario> consultarFuncionario() {
+    //GET
+    public Iterable<Funcionario> consultarFuncionarios() {
         return funcionarioRepositorio.findAll();
     }
 
-    //Post(Accesses)
+    //Post
     public void inserirFuncionario(Funcionario funcionario) {
         funcionarioRepositorio.save(funcionario);
     }
 
 
-    //PUT(Accesses) - (GetIdPessoa ou getIdFuncionario)
+    //PUT - (GetIdPessoa ou getIdFuncionario)
     public void atualizarFuncionario(Funcionario funcionario) throws Exception {
         if (funcionario.getIdPessoa() == null) {
             throw new Exception("Não foi possível atualizar um funcionario com Id nulo.");
@@ -32,7 +32,7 @@ public class FuncionarioServico {
         funcionarioRepositorio.save(funcionario);
     }
 
-    //DELETE(Accesses)
+    //DELETE
     public void apagarFuncionario(Funcionario funcionario) {
         funcionarioRepositorio.delete(funcionario);
     }

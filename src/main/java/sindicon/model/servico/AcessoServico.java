@@ -13,17 +13,17 @@ public class AcessoServico {
     @Autowired
     AcessoRepositorio acessoRepositorio;
 
-    //GET(Accesses)
-    public Iterable<Acesso> consultarAcesso() {
+    //GET
+    public Iterable<Acesso> consultarAcessos() {
         return acessoRepositorio.findAll();
     }
 
-    //Post(Accesses)
+    //Post
     public void inserirAcesso(Acesso acesso) {
         acessoRepositorio.save(acesso);
     }
 
-    //PUT(Accesses)
+    //PUT
     public void atualizarAcesso(Acesso acesso) throws Exception {
         if (acesso.getIdAcesso() == null) {
             throw new Exception("Não foi possível atualizar um acesso com Id nulo.");
@@ -31,7 +31,7 @@ public class AcessoServico {
         acessoRepositorio.save(acesso);
     }
 
-    //DELETE(Accesses)
+    //DELETE
     public void apagarAcesso(Acesso acesso) {
         acessoRepositorio.delete(acesso);
     }

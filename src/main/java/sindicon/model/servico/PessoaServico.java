@@ -13,17 +13,17 @@ public class PessoaServico {
     @Autowired
     PessoaRepositorio pessoaRepositorio;
 
-    //GET(Accesses)
-    public Iterable<Pessoa> consultarPessoa() {
+    //GET
+    public Iterable<Pessoa> consultarPessoas() {
         return pessoaRepositorio.findAll();
     }
 
-    //Post(Accesses)
+    //Post
     public void inserirPessoa(Pessoa pessoa) {
         pessoaRepositorio.save(pessoa);
     }
 
-    //PUT(Accesses)
+    //PUT
     public void atualizarPessoa(Pessoa pessoa) throws Exception {
         if (pessoa.getIdPessoa() == null) {
             throw new Exception("Não foi possível atualizar um pessoa com Id nulo.");
@@ -31,7 +31,7 @@ public class PessoaServico {
         pessoaRepositorio.save(pessoa);
     }
 
-    //DELETE(Accesses)
+    //DELETE
     public void apagarPessoa(Pessoa pessoa) {
         pessoaRepositorio.delete(pessoa);
     }

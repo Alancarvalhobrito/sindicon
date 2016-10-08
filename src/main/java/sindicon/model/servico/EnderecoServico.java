@@ -12,17 +12,17 @@ import sindicon.model.persistencia.repositorio.EnderecoRepositorio;
 public class EnderecoServico {
     EnderecoRepositorio enderecoRepositorio;
 
-    //GET(Adresses)
-    public Iterable<Endereco> consultarEndereco() {
+    //GET
+    public Iterable<Endereco> consultarEnderecos() {
         return enderecoRepositorio.findAll();
     }
 
-    //Post(Adresses)
+    //Post
     public void inserirEndereco(Endereco endereco) {
         enderecoRepositorio.save(endereco);
     }
 
-    //PUT(Adresses)
+    //PUT
     public void atualizarEndereco(Endereco endereco) throws Exception {
         if (endereco.getIdEndereco() == null) {
             throw new Exception("Não foi possível atualizar um endereco com Id nulo.");
@@ -30,7 +30,7 @@ public class EnderecoServico {
         enderecoRepositorio.save(endereco);
     }
 
-    //DELETE(Adresses)
+    //DELETE
     public void apagarEndereco(Endereco endereco) {
         enderecoRepositorio.delete(endereco);
     }

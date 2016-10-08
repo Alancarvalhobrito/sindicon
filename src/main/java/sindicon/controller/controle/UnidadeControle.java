@@ -8,48 +8,48 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import sindicon.model.persistencia.entidade.Acesso;
-import sindicon.model.servico.AcessoServico;
+import sindicon.model.persistencia.entidade.Unidade;
+import sindicon.model.servico.UnidadeServico;
 
 /**
  * Created by Thiago on 08/10/2016.
  */
 @RestController
-@RequestMapping("/acesso")
-public class AcessoControle {
+@RequestMapping("/unidade")
+public class UnidadeControle {
     @Autowired
-    AcessoServico acessoServico;
+    UnidadeServico unidadeServico;
 
-    //GET
+    //GET(Accesses)
     @RequestMapping(method = RequestMethod.GET)
-    public Iterable<Acesso> get() {
-        return acessoServico.consultarAcessos();
+    public Iterable<Unidade> get() {
+        return unidadeServico.consultarUnidades();
     }
 
-    //Post
+    //Post(Accesses)
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> post(@RequestBody Acesso acesso) {
-        acessoServico.inserirAcesso(acesso);
+    public ResponseEntity<?> post(@RequestBody Unidade unidade) {
+        unidadeServico.inserirUnidade(unidade);
         HttpHeaders httpHeaders = new HttpHeaders();
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
     }
 
-    //PUT
+    //PUT(Accesses)
     @RequestMapping(method = RequestMethod.PUT)
-    public ResponseEntity<?> put(@RequestBody Acesso acesso) {
+    public ResponseEntity<?> put(@RequestBody Unidade unidade) {
         HttpHeaders httpHeaders = new HttpHeaders();
         try {
-            acessoServico.atualizarAcesso(acesso);
+            unidadeServico.atualizarUnidade(unidade);
         } catch (Exception e) {
             return new ResponseEntity<>(null, httpHeaders, HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
     }
 
-    //DELETE
+    //DELETE(Accesses)
     @RequestMapping(method = RequestMethod.DELETE)
-    public ResponseEntity<?> delete(@RequestBody Acesso acesso) {
-        acessoServico.apagarAcesso(acesso);
+    public ResponseEntity<?> delete(@RequestBody Unidade unidade) {
+        unidadeServico.apagarUnidade(unidade);
         HttpHeaders httpHeaders = new HttpHeaders();
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.OK);
     }

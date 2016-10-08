@@ -13,17 +13,17 @@ public class MoradorUnidadeServico {
     @Autowired
     MoradorUnidadeRepositorio moradorUnidadeRepositorio;
 
-    //GET(Accesses)
-    public Iterable<MoradorUnidade> consultarMoradorUnidade() {
+    //GET
+    public Iterable<MoradorUnidade> consultarMoradoresUnidades() {
         return moradorUnidadeRepositorio.findAll();
     }
 
-    //Post(Accesses)
+    //Post
     public void inserirMoradorUnidade(MoradorUnidade moradorUnidade) {
         moradorUnidadeRepositorio.save(moradorUnidade);
     }
 
-    //PUT(Accesses)
+    //PUT
     public void atualizarMoradorUnidade(MoradorUnidade moradorUnidade) throws Exception {
         if (moradorUnidade.getIdMoradorUnidade() == null) {
             throw new Exception("Não foi possível atualizar um moradorUnidade com Id nulo.");
@@ -31,7 +31,7 @@ public class MoradorUnidadeServico {
         moradorUnidadeRepositorio.save(moradorUnidade);
     }
 
-    //DELETE(Accesses)
+    //DELETE
     public void apagarMoradorUnidade(MoradorUnidade moradorUnidade) {
         moradorUnidadeRepositorio.delete(moradorUnidade);
     }

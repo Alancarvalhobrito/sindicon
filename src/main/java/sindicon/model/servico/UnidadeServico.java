@@ -13,17 +13,17 @@ public class UnidadeServico {
     @Autowired
     UnidadeRepositorio unidadeRepositorio;
 
-    //GET(Accesses)
-    public Iterable<Unidade> consultarUnidade() {
+    //GET
+    public Iterable<Unidade> consultarUnidades() {
         return unidadeRepositorio.findAll();
     }
 
-    //Post(Accesses)
+    //Post
     public void inserirUnidade(Unidade unidade) {
         unidadeRepositorio.save(unidade);
     }
 
-    //PUT(Accesses)
+    //PUT
     public void atualizarUnidade(Unidade unidade) throws Exception {
         if (unidade.getIdUnidade() == null) {
             throw new Exception("Não foi possível atualizar um unidade com Id nulo.");
@@ -31,7 +31,7 @@ public class UnidadeServico {
         unidadeRepositorio.save(unidade);
     }
 
-    //DELETE(Accesses)
+    //DELETE
     public void apagarUnidade(Unidade unidade) {
         unidadeRepositorio.delete(unidade);
     }

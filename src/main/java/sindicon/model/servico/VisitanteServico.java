@@ -13,18 +13,18 @@ public class VisitanteServico {
     @Autowired
     VisitanteRepositorio visitanteRepositorio;
 
-    //GET(Accesses)
-    public Iterable<Visitante> consultarVisitante() {
+    //GET
+    public Iterable<Visitante> consultarVisitantes() {
         return visitanteRepositorio.findAll();
     }
 
-    //Post(Accesses)
+    //Post
     public void inserirVisitante(Visitante visitante) {
         visitanteRepositorio.save(visitante);
     }
 
 
-    //PUT(Accesses) - (GetIdPessoa ou getIdVisitante)
+    //PUT - (GetIdPessoa ou getIdVisitante)
     public void atualizarVisitante(Visitante visitante) throws Exception {
         if (visitante.getIdPessoa() == null) {
             throw new Exception("Não foi possível atualizar um visitante com Id nulo.");
@@ -32,7 +32,7 @@ public class VisitanteServico {
         visitanteRepositorio.save(visitante);
     }
 
-    //DELETE(Accesses)
+    //DELETE
     public void apagarVisitante(Visitante visitante) {
         visitanteRepositorio.delete(visitante);
     }

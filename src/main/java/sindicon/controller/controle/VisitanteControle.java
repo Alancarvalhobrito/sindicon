@@ -8,48 +8,48 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import sindicon.model.persistencia.entidade.Acesso;
-import sindicon.model.servico.AcessoServico;
+import sindicon.model.persistencia.entidade.Visitante;
+import sindicon.model.servico.VisitanteServico;
 
 /**
  * Created by Thiago on 08/10/2016.
  */
 @RestController
-@RequestMapping("/acesso")
-public class AcessoControle {
+@RequestMapping("/visitante")
+public class VisitanteControle {
     @Autowired
-    AcessoServico acessoServico;
+    VisitanteServico visitanteServico;
 
-    //GET
+    //GET(Accesses)
     @RequestMapping(method = RequestMethod.GET)
-    public Iterable<Acesso> get() {
-        return acessoServico.consultarAcessos();
+    public Iterable<Visitante> get() {
+        return visitanteServico.consultarVisitantes();
     }
 
-    //Post
+    //Post(Accesses)
     @RequestMapping(method = RequestMethod.POST)
-    public ResponseEntity<?> post(@RequestBody Acesso acesso) {
-        acessoServico.inserirAcesso(acesso);
+    public ResponseEntity<?> post(@RequestBody Visitante visitante) {
+        visitanteServico.inserirVisitante(visitante);
         HttpHeaders httpHeaders = new HttpHeaders();
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
     }
 
-    //PUT
+    //PUT(Accesses)
     @RequestMapping(method = RequestMethod.PUT)
-    public ResponseEntity<?> put(@RequestBody Acesso acesso) {
+    public ResponseEntity<?> put(@RequestBody Visitante visitante) {
         HttpHeaders httpHeaders = new HttpHeaders();
         try {
-            acessoServico.atualizarAcesso(acesso);
+            visitanteServico.atualizarVisitante(visitante);
         } catch (Exception e) {
             return new ResponseEntity<>(null, httpHeaders, HttpStatus.BAD_REQUEST);
         }
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.CREATED);
     }
 
-    //DELETE
+    //DELETE(Accesses)
     @RequestMapping(method = RequestMethod.DELETE)
-    public ResponseEntity<?> delete(@RequestBody Acesso acesso) {
-        acessoServico.apagarAcesso(acesso);
+    public ResponseEntity<?> delete(@RequestBody Visitante visitante) {
+        visitanteServico.apagarVisitante(visitante);
         HttpHeaders httpHeaders = new HttpHeaders();
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.OK);
     }

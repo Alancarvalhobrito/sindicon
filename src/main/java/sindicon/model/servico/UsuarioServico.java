@@ -13,17 +13,17 @@ public class UsuarioServico {
     @Autowired
     UsuarioRepositorio usuarioRepositorio;
 
-    //GET(Accesses)
-    public Iterable<Usuario> consultarUsuario() {
+    //GET
+    public Iterable<Usuario> consultarUsuarios() {
         return usuarioRepositorio.findAll();
     }
 
-    //Post(Accesses)
+    //Post
     public void inserirUsuario(Usuario usuario) {
         usuarioRepositorio.save(usuario);
     }
 
-    //PUT(Accesses)
+    //PUT
     public void atualizarUsuario(Usuario usuario) throws Exception {
         if (usuario.getIdUsuario() == null) {
             throw new Exception("Não foi possível atualizar um usuario com Id nulo.");
@@ -31,7 +31,7 @@ public class UsuarioServico {
         usuarioRepositorio.save(usuario);
     }
 
-    //DELETE(Accesses)
+    //DELETE
     public void apagarUsuario(Usuario usuario) {
         usuarioRepositorio.delete(usuario);
     }
