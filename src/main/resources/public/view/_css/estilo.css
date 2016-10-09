@@ -1,0 +1,72 @@
+body {
+    font-family: Calibri;
+    padding: 0;
+    margin: 0;
+}
+
+/* Configuração de Layout FlexBox (Colunas,Linhas,Filhas) */
+.content .header .navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar .block{
+    display: flex;
+    flex-direction: row;
+}
+
+.content > *, .header > *, .navbar > * .block > *{
+    flex: 1 1 auto;
+}
+
+.header {
+    padding: 10px;
+    height: 40px;
+    background: orange;
+    color: white;
+    border-bottom: 2px white solid;
+}
+
+.header a #imgLogo{
+    width: 90px;
+}
+
+#navbar{
+    border-shadow: 2 2 black;
+    border-bottom: 2px white solid;
+    cursor: pointer;
+}
+
+#menu {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+
+#menu a {
+    background: #141414;
+    color: #fff;
+    display: block;
+    -webkit-box-flex: 1;
+    text-align: center;
+    line-height: 80px;
+    text-decoration: none;
+}
+
+#menu a:hover {
+    background: orange;
+    color: #2d2106;
+    transition: all .3s linear;
+}
+#footer{
+    background: #141414;
+    color: #fff;
+    height: 40px;
+}
+#footer p{
+    padding: 10px;
+    font-family: Verdana;
+}
+.material-icons{
+    padding: 20px 0;
+    width:30px;
+}

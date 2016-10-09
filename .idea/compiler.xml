@@ -20,6 +20,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="sindicon_main" target="1.8" />
+      <module name="Sindicon_main" target="1.8" />
+      <module name="Sindicon_test" target="1.8" />
       <module name="sindicon_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
