@@ -1,35 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9cab960a-9841-4b28-b01c-8dd0bf0cae5f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/_imagens/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/desktop.ini" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/_css/estilo.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/config/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/config/appRoutes.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/funcionarioCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/homeCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/moradorCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/relatorioCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/visitanteCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/libs/angular-resource.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/libs/angular-ui-router.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/libs/angular.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/service/sectorService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/views/Login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/views/funcionario.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/views/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/views/morador.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/views/relatorio.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/views/visitante.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/desktop.ini" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/modules/Sindicon.iml" afterPath="$PROJECT_DIR$/.idea/modules/sindicon.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/modules/Sindicon_main.iml" afterPath="$PROJECT_DIR$/.idea/modules/sindicon_main.iml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/modules/Sindicon_test.iml" afterPath="$PROJECT_DIR$/.idea/modules/sindicon_test.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+    <list default="true" id="9cab960a-9841-4b28-b01c-8dd0bf0cae5f" name="Default" comment="Front-end.v2">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/servico/homeService.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/service/sectorService.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/_css/estilo.css" afterPath="$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/_imagens/logo1.png" afterPath="$PROJECT_DIR$/src/main/resources/public/view/imagens/logo1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/config/app.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/app.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/config/appRoutes.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/appRoutes.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/funcionarioCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/funcionarioCtrl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/homeCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/moradorCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/moradorCtrl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/relatorioCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/relatorioCtrl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/visitanteCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/visitanteCtrl.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/libs/angular-resource.min.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/bibliotecas/angular-resource.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/libs/angular-ui-router.min.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/bibliotecas/angular-ui-router.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/libs/angular.min.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/bibliotecas/angular.min.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/Login.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/Login.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/funcionario.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/funcionario.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/home.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/home.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/morador.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/morador.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/relatorio.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/relatorio.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/visitante.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/visitante.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/index.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/index.html" />
     </list>
     <ignored path="sindicon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,11 +63,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            <state relative-caret-position="187">
+              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estilo.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -488,6 +492,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/public/view/desktop.ini" />
         <option value="$PROJECT_DIR$/src/main/resources/public/view/_css/estilo.css" />
         <option value="$PROJECT_DIR$/src/main/resources/public/desktop.ini" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/js/servico/homeService.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/index.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css" />
       </list>
     </option>
   </component>
@@ -566,32 +574,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -691,12 +673,38 @@
               <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sindicon" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="sindicon" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -709,12 +717,15 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Thiago\Google Drive\Universidade Paulista\Projetos\#1 - (NEW) Trabalho de Conclusão de Curso\16. Projeto - TCC\sindicon\sindicon\src\main\resources\public\view\js\servico" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Thiago\Google Drive\Universidade Paulista\Projetos\#1 - (NEW) Trabalho de Conclusão de Curso\16. Projeto - TCC\sindicon\sindicon\src\main\resources\public" />
       <recent name="C:\Users\Thiago\Google Drive\Universidade Paulista\Projetos\#1 - (NEW) Trabalho de Conclusão de Curso\16. Projeto - TCC\sindicon\sindicon\src\main\resources\public\view" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.Main">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -749,6 +760,9 @@
       <method>
         <option name="Make" enabled="false" />
       </method>
+    </configuration>
+    <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/sindicon/sindicon_main/public/view/index.html">
+      <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -1173,16 +1187,18 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Main" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.Main (1)" />
       <item index="2" class="java.lang.String" itemvalue="Groovy.build" />
+      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Spring Boot.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Groovy.build" />
-        <item index="2" class="java.lang.String" itemvalue="Spring Boot.Main (1)" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+        <item index="1" class="java.lang.String" itemvalue="Spring Boot.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Groovy.build" />
+        <item index="3" class="java.lang.String" itemvalue="Spring Boot.Main (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -1199,7 +1215,7 @@
       <workItem from="1475971928308" duration="979000" />
       <workItem from="1475974868966" duration="335000" />
       <workItem from="1475975216105" duration="25000" />
-      <workItem from="1475981286937" duration="581000" />
+      <workItem from="1475981286937" duration="3268000" />
     </task>
     <task id="LOCAL-00001" summary="Back-end.v2">
       <created>1475975128088</created>
@@ -1208,11 +1224,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475975128088</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Front-end.v1">
+      <created>1475981940480</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1475981940480</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1920000" />
+    <option name="totallyTimeSpent" value="4607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
@@ -1220,7 +1243,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1234,6 +1257,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22254759" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1245,7 +1269,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1261,7 +1284,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Back-end.v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Back-end.v2" />
+    <MESSAGE value="Front-end.v1" />
+    <MESSAGE value="Front-end.v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Front-end.v2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1465,14 +1490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/_css/estilo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="6" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/desk">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1497,10 +1514,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/servico/homeService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        <state relative-caret-position="187">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
           <folding />
         </state>
       </provider>

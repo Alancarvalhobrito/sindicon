@@ -12,7 +12,7 @@ angular.module('appRouters', [])
                 params: {
                     param1: null
                 },
-                templateUrl: 'views/home.html',
+                templateUrl: 'paginas/home.html',
                 controller: 'homeController'
             })
 
@@ -21,7 +21,7 @@ angular.module('appRouters', [])
                 params: {
                     param1: null
                 },
-                templateUrl: 'views/morador.html',
+                templateUrl: 'paginas/morador.html',
                 controller: 'moradorController'
             })
 
@@ -30,7 +30,7 @@ angular.module('appRouters', [])
                 params: {
                     param1: null
                 },
-                templateUrl: 'views/visitante.html',
+                templateUrl: 'paginas/visitante.html',
                 controller: 'visitanteController'
             })
 
@@ -39,7 +39,7 @@ angular.module('appRouters', [])
                 params: {
                     param1: null
                 },
-                templateUrl: 'views/funcionario.html',
+                templateUrl: 'paginas/funcionario.html',
                 controller: 'funcionarioController'
             })
 
@@ -48,7 +48,7 @@ angular.module('appRouters', [])
                 params: {
                     param1: null
                 },
-                templateUrl: 'views/relatorio.html',
+                templateUrl: 'paginas/relatorio.html',
                 controller: 'relatorioController'
             })
     }]);

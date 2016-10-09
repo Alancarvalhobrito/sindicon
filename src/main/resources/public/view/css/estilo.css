@@ -5,21 +5,22 @@ body {
 }
 
 /* Configuração de Layout FlexBox (Colunas,Linhas,Filhas) */
-.content .header .navbar {
+#content #header .navbar {
     display: flex;
     flex-direction: column;
 }
 
-.navbar .block{
+.navbar .block {
     display: flex;
     flex-direction: row;
 }
 
-.content > *, .header > *, .navbar > * .block > *{
+#content > *, #header > *, .navbar > *, .block > * {
     flex: 1 1 auto;
 }
 
-.header {
+/* Header */
+#header {
     padding: 10px;
     height: 40px;
     background: orange;
@@ -27,12 +28,12 @@ body {
     border-bottom: 2px white solid;
 }
 
-.header a #imgLogo{
+#header a #imgLogo {
     width: 90px;
 }
 
-#navbar{
-    border-shadow: 2 2 black;
+/* Navegation */
+#navbar {
     border-bottom: 2px white solid;
     cursor: pointer;
 }
@@ -57,16 +58,22 @@ body {
     color: #2d2106;
     transition: all .3s linear;
 }
-#footer{
+
+.material-icons {
+    padding: 20px 0;
+    width: 30px;
+}
+
+/* */
+
+/* Footer */
+#footer {
     background: #141414;
     color: #fff;
     height: 40px;
 }
-#footer p{
+
+#footer p {
     padding: 10px;
     font-family: Verdana;
-}
-.material-icons{
-    padding: 20px 0;
-    width:30px;
 }
