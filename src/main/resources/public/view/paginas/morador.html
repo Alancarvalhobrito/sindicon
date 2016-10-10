@@ -1,2 +1,60 @@
-<h1>Morador</h1>
-{{addmoradorTitle}}
+<main class="main">
+    <form id="formulario_morador">
+        <img id="foto_morador" src="imagens/user/user4.jpg"></img>
+        <div id="infoMorador">
+            <fieldset>
+                <p>
+                <label for="nome">NOME: </label>
+                <input type="text" name="nome" id="nome" size="20" maxlength="30" placeholder="Nome Completo"/>
+                <label for="tel">TELEFONE: </label>
+                <input type="text" name="telefone" id="tel" size="20" maxlength="30" placeholder="Telefone"/>
+                <label for="cel">CELULAR: </label>
+                <input type="text" name="celular" id="cel" size="20" maxlength="30" placeholder="Ceular"/>
+                <label for="mail">EMAIL: </label>
+                <input type="text" name="email" id="mail" size="20" maxlength="30" placeholder="Email"/>
+                </p>
+                <p>
+                    <label for="rg">RG: </label>
+                    <input type="text" name="rg" id="rg" size="20" maxlength="30" placeholder="Registro Geral"/>
+                    <label for="orgexp">ORGÃO EXPEDIDOR: </label>
+                    <input type="text" name="orgexp" id="orgexp" size="20" maxlength="30"
+                           placeholder="Orgão Expedidor"/>
+                    <label for="uf">UF: </label>
+                    <select nome="uf" id="uf">
+                        <option label="Selecione">
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
+                        <option value="MG">MG</option>
+                        </option>
+                    </select>
+                    <label for="cpf">CPF: </label>
+                    <input type="text" name="cpf" id="cpf" size="20" maxlength="30" placeholder="CPF"/>
+                </p>
+                <p>
+                    <label for="bloco">BLOCO: </label>
+                    <select nome="bloco" id="bloco">
+                        <option label="Selecione">
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        </option>
+                    </select>
+                    <label for="casa">CASA: </label>
+                    <select nome="casa" id="casa">
+                        <option label="Selecione">
+                        <option value="001">101</option>
+                        <option value="002">102</option>
+                        <option value="003">103</option>
+                        </option>
+                    </select>
+                </p>
+                <p>
+                <p><input type="checkbox" name="tPed" id="cPed" checked> Possui Carro
+                </p>
+                <input type="button" name="botao-morador" value="Salvar">
+                <input type="button" name="botao-morador" value="Cancelar">
+            </fieldset>
+        </div>
+    </form>
+</main>
+</main>

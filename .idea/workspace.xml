@@ -1,29 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9cab960a-9841-4b28-b01c-8dd0bf0cae5f" name="Default" comment="Front-end.v2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/servico/homeService.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/service/sectorService.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/_css/estilo.css" afterPath="$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/_imagens/logo1.png" afterPath="$PROJECT_DIR$/src/main/resources/public/view/imagens/logo1.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/config/app.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/app.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/config/appRoutes.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/appRoutes.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/funcionarioCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/funcionarioCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/homeCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/moradorCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/moradorCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/relatorioCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/relatorioCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controllers/visitanteCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/visitanteCtrl.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/libs/angular-resource.min.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/bibliotecas/angular-resource.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/libs/angular-ui-router.min.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/bibliotecas/angular-ui-router.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/libs/angular.min.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/bibliotecas/angular.min.js" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/Login.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/Login.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/funcionario.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/funcionario.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/home.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/home.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/morador.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/morador.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/relatorio.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/relatorio.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/public/view/views/visitante.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/visitante.html" />
+    <list default="true" id="9cab960a-9841-4b28-b01c-8dd0bf0cae5f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/imagens/cancela_aberta.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/imagens/cancela_fechada.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/imagens/user/user1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/imagens/user/user2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/imagens/user/user3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/imagens/user/user4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/view/imagens/user/user5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/desktop.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/desktop.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gradle/wrapper/desktop.ini" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/desktop.ini" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/AppConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/AppConfiguration.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/Constants.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/Main.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/Main.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/AcessoControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/AcessoControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/EnderecoControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/EnderecoControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/FuncionarioControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/FuncionarioControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/MoradorControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/MoradorControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/MoradorUnidadeControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/MoradorUnidadeControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/PessoaControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/PessoaControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/UnidadeControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/UnidadeControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/UsuarioControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/UsuarioControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/VeiculoControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/VeiculoControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/controller/controle/VisitanteControle.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/controller/controle/VisitanteControle.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Acesso.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Acesso.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Endereco.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Endereco.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Funcionario.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Funcionario.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Morador.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Morador.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/MoradorUnidade.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/MoradorUnidade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Pessoa.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Pessoa.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Unidade.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Unidade.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Usuario.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Usuario.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Veiculo.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Veiculo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Visitante.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Visitante.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/AcessoRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/AcessoRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/EnderecoRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/EnderecoRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/FuncionarioRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/FuncionarioRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/MoradorRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/MoradorRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/MoradorUnidadeRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/MoradorUnidadeRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/PessoaRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/PessoaRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/UnidadeRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/UnidadeRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/UsuarioRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/UsuarioRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/VeiculoRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/VeiculoRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/VisitanteRepositorio.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/VisitanteRepositorio.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/AcessoServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/AcessoServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/EnderecoServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/EnderecoServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/FuncionarioServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/FuncionarioServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/MoradorServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/MoradorServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/MoradorUnidadeServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/MoradorUnidadeServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/PessoaServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/PessoaServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/UnidadeServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/UnidadeServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/UsuarioServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/UsuarioServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/VeiculoServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/VeiculoServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/sindicon/model/servico/VisitanteServico.java" afterPath="$PROJECT_DIR$/src/main/java/sindcon/model/servico/VisitanteServico.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/desktop.ini" afterPath="$PROJECT_DIR$/.idea/copyright/desktop.ini" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/desktop.ini" afterPath="$PROJECT_DIR$/src/main/resources/public/desktop.ini" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css" afterPath="$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/index.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/app.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js" afterPath="$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/paginas/funcionario.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/funcionario.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/paginas/home.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/paginas/morador.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/morador.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/paginas/relatorio.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/relatorio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/view/paginas/visitante.html" afterPath="$PROJECT_DIR$/src/main/resources/public/view/paginas/visitante.html" />
     </list>
     <ignored path="sindicon.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,28 +108,96 @@
     <favorites_list name="sindicon" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="estilo.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5446559">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/home.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="255">
+                  <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="morador.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/morador.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-291">
+                  <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="appRoutes.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/appRoutes.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="561">
+                  <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/app.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="85" selection-start-line="0" selection-start-column="85" selection-end-line="0" selection-end-column="85" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="homeCtrl.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="340">
+                  <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="funcionario.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/funcionario.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="estilo.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="423">
+                  <caret line="143" column="18" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -492,9 +606,17 @@
         <option value="$PROJECT_DIR$/src/main/resources/public/view/desktop.ini" />
         <option value="$PROJECT_DIR$/src/main/resources/public/view/_css/estilo.css" />
         <option value="$PROJECT_DIR$/src/main/resources/public/desktop.ini" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js" />
         <option value="$PROJECT_DIR$/src/main/resources/public/view/js/servico/homeService.js" />
+        <option value="$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Pessoa.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/paginas/visitante.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/paginas/funcionario.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/paginas/relatorio.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/app.js" />
         <option value="$PROJECT_DIR$/src/main/resources/public/view/index.html" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/paginas/home.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/view/paginas/morador.html" />
         <option value="$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css" />
       </list>
     </option>
@@ -543,8 +665,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -553,163 +674,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sindicon" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -718,9 +686,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Thiago\Google Drive\Universidade Paulista\Projetos\#1 - (NEW) Trabalho de Conclusão de Curso\16. Projeto - TCC\sindicon\sindicon\src\main\resources\public\view\imagens" />
       <recent name="C:\Users\Thiago\Google Drive\Universidade Paulista\Projetos\#1 - (NEW) Trabalho de Conclusão de Curso\16. Projeto - TCC\sindicon\sindicon\src\main\resources\public\view\js\servico" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Thiago\Google Drive\Universidade Paulista\Projetos\#1 - (NEW) Trabalho de Conclusão de Curso\16. Projeto - TCC\sindicon\sindicon\src\main\resources\public\view\imagens\user" />
+      <recent name="C:\Users\Thiago\Google Drive\Universidade Paulista\Projetos\#1 - (NEW) Trabalho de Conclusão de Curso\16. Projeto - TCC\sindicon\sindicon\src\main\resources\public\view\imagens" />
       <recent name="C:\Users\Thiago\Google Drive\Universidade Paulista\Projetos\#1 - (NEW) Trabalho de Conclusão de Curso\16. Projeto - TCC\sindicon\sindicon\src\main\resources\public" />
       <recent name="C:\Users\Thiago\Google Drive\Universidade Paulista\Projetos\#1 - (NEW) Trabalho de Conclusão de Curso\16. Projeto - TCC\sindicon\sindicon\src\main\resources\public\view" />
     </key>
@@ -729,24 +700,12 @@
     <configuration default="false" name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="sindicon.*" />
+          <option name="PATTERN" value="sindcon.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="sindicon.Main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="sindcon.Main" />
       <module name="sindicon_main" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Main (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="sindicon.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="sindicon.Main" />
-      <module name="Sindicon_main" />
       <envs />
       <method />
     </configuration>
@@ -1187,18 +1146,17 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <list size="4">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.Main (1)" />
-      <item index="2" class="java.lang.String" itemvalue="Groovy.build" />
-      <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
+      <item index="1" class="java.lang.String" itemvalue="Groovy.build" />
+      <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
       <list size="4">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
         <item index="1" class="java.lang.String" itemvalue="Spring Boot.Main" />
         <item index="2" class="java.lang.String" itemvalue="Groovy.build" />
-        <item index="3" class="java.lang.String" itemvalue="Spring Boot.Main (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Spring Boot.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -1215,7 +1173,14 @@
       <workItem from="1475971928308" duration="979000" />
       <workItem from="1475974868966" duration="335000" />
       <workItem from="1475975216105" duration="25000" />
-      <workItem from="1475981286937" duration="3268000" />
+      <workItem from="1475981286937" duration="3641000" />
+      <workItem from="1475985025877" duration="209000" />
+      <workItem from="1475985613399" duration="543000" />
+      <workItem from="1476020154610" duration="7097000" />
+      <workItem from="1476028077679" duration="12452000" />
+      <workItem from="1476053431932" duration="78000" />
+      <workItem from="1476065809357" duration="596000" />
+      <workItem from="1476096548986" duration="28000" />
     </task>
     <task id="LOCAL-00001" summary="Back-end.v2">
       <created>1475975128088</created>
@@ -1231,45 +1196,82 @@
       <option name="project" value="LOCAL" />
       <updated>1475981940480</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Front-end.v2">
+      <created>1475984584759</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1475984584759</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4607000" />
+    <option name="totallyTimeSpent" value="25983000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22254759" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22254759" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20424597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837838" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22254759" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1297,7 +1299,7 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1305,179 +1307,209 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/AcessoControle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1088">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/EnderecoControle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/EnderecoControle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/MoradorControle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/MoradorControle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/MoradorUnidadeControle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/MoradorUnidadeControle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/PessoaControle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/PessoaControle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/UnidadeControle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/UnidadeControle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/UsuarioControle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/UsuarioControle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/VeiculoControle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/VeiculoControle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/VisitanteControle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/VisitanteControle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Acesso.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Endereco.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Endereco.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Funcionario.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Funcionario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Morador.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Morador.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Pessoa.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Unidade.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Unidade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Usuario.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Usuario.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Veiculo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Veiculo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/Visitante.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Visitante.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/AcessoRepositorio.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/EnderecoRepositorio.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/repositorio/EnderecoRepositorio.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/model/persistencia/entidade/MoradorUnidade.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/MoradorUnidade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/controller/controle/FuncionarioControle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/FuncionarioControle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/desktop.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/sindicon/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/desktop.ini" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
           <folding />
         </state>
       </provider>
@@ -1486,62 +1518,141 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/desk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/desk">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/desk" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/desk" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/desktop.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/servico/homeService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="39" column="34" selection-start-line="39" selection-start-column="34" selection-end-line="39" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Pessoa.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/visitante.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/relatorio.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/entidade/Acesso.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/persistencia/repositorio/AcessoRepositorio.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="57" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/controller/controle/AcessoControle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/sindcon/model/servico/AcessoServico.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/funcionario.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/controle/homeCtrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        <state relative-caret-position="340">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/servico/homeService.js">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="85" selection-start-line="0" selection-start-column="85" selection-end-line="0" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/js/configuracao/appRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="27" />
+        <state relative-caret-position="272">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/css/estilo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        <state relative-caret-position="423">
+          <caret line="143" column="18" selection-start-line="143" selection-start-column="18" selection-end-line="143" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/public/view/paginas/morador.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-291">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding />
         </state>
       </provider>

@@ -1,4 +1,4 @@
-group 'Sindicon'
+group 'Sindcon'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -17,7 +17,7 @@ apply plugin: 'spring-boot'
 
 jar {
     manifest {
-        attributes 'Main-Class': 'sindicon.Main'
+        attributes 'Main-Class': 'sindcon.Main'
     }
     from {
         configurations.compile.collect {
