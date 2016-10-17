@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sindicon.iml" filepath="$PROJECT_DIR$/.idea/modules/sindicon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sindicon_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sindicon_main.iml" group="sindicon" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sindicon_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sindicon_test.iml" group="sindicon" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sindcon.iml" filepath="$PROJECT_DIR$/.idea/modules/sindcon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sindcon_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sindcon_main.iml" group="sindcon" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sindcon_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sindcon_test.iml" group="sindcon" />
     </modules>
   </component>
 </project>

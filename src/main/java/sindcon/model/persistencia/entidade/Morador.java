@@ -10,7 +10,6 @@ import java.util.Collection;
 @Entity
 @PrimaryKeyJoinColumn(name = "id_morador", referencedColumnName = "id_pessoa")
 public class Morador extends Pessoa {
-
     //Relacionamentos:
     @OneToMany(mappedBy = "morador")
     @JsonIgnore

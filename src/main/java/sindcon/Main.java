@@ -3,8 +3,10 @@ package sindcon;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+
 import java.io.DataInputStream;
 import java.io.IOException;
+
 import static java.lang.Thread.sleep;
 
 @SpringBootApplication

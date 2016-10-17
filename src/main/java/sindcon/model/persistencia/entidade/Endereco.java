@@ -13,7 +13,7 @@ public class Endereco {
     private String endereco;
     private String bairro;
     private String cidade;
-    private char uf;
+    private String uf;
     private String cep;
 
     //Relacionamentos:
@@ -46,10 +46,10 @@ public class Endereco {
     public void setCidade(String cidade) {
         this.cidade = cidade;
     }
-    public char getUf() {
+    public String getUf() {
         return uf;
     }
-    public void setUf(char uf) {
+    public void setUf(String uf) {
         this.uf = uf;
     }
     public String getCep() {

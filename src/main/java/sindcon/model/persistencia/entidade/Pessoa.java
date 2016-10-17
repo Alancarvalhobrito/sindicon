@@ -16,7 +16,7 @@ public class Pessoa {
     private Long idPessoa;
     private String nome;
     private Integer rg;
-    private char ufRg;
+    private String ufRg;
     private String cpf;
     private Byte foto;
     @Column(name = "telefone_fixo")
@@ -62,10 +62,10 @@ public class Pessoa {
     public void setRg(Integer rg) {
         this.rg = rg;
     }
-    public char getUfRg() {
+    public String getUfRg() {
         return ufRg;
     }
-    public void setUfRg(char ufRg) {
+    public void setUfRg(String ufRg) {
         this.ufRg = ufRg;
     }
     public String getCpf() {
