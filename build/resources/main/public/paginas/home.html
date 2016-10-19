@@ -1,0 +1,73 @@
+<main class="main">
+    <div id="home">
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <img class="cancela" src="imagens/cancela_fechada.png">
+            <img class="cancela" src="imagens/cancela_aberta.png"/>
+        </aside>
+        <!-- Section -->
+        <section id="section">
+            <article class="container">
+                Entrada:
+            </article>
+            <article id="pessoa">
+                <img class="fotoPessoa" src="imagens/user/user1.jpg">
+                <img class="fotoPessoa" src="imagens/user/user4.jpg"/>
+            </article>
+            <article class="container">
+                Saída:
+            </article>
+            <article id="formulario_home">
+                <img id="fotoHome" src="imagens/user/user2.jpg">
+                <form>
+                    <p>
+                        <label for="nome">NOME: </label>
+                        <input type="text" name="nome" id="nome" size="30" maxlength="30" placeholder="Nome Completo"/>
+                    </p>
+                    <p>
+                        <label for="rg">RG: </label>
+                        <input type="text" name="rg" id="rg" size="20" maxlength="30"
+                               placeholder="Registro Geral"/>
+                        <label for="est">UF: </label>
+                        <select nome="est" id="est">
+                            <option label="Selecione">
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerias</option>
+                            </option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="cpf">CPF: </label>
+                        <input type="text" name="rg" id="cpf" size="20" maxlength="30" placeholder="CPF"/>
+                    </p>
+                    <p>
+                        <label for="bloco">BLOCO: </label>
+                        <select nome="bloco" id="bloco">
+                            <option label="Selecione">
+                            <option value="a">A</option>
+                            <option value="b">B</option>
+                            <option value="c">C</option>
+                            </option>
+                        </select>
+                        <label for="casa">CASA: </label>
+                        <select nome="casa" id="casa">
+                            <option label="Selecione">
+                            <option value="001">101</option>
+                            <option value="002">102</option>
+                            <option value="003">103</option>
+                            </option>
+                        </select>
+                    </p>
+                    <p>
+                    <p><label for="obs">OBSERVAÇÃO: </label>
+                        <textarea name="observacao" id="obs" cols="45" rows="5" placeholder="Deixe aqui sua Observação"
+                                  ng-model="visitante.observacao" placeholder="Observação">
+                </textarea></p>
+                    <input type="button" name="botao-visitante" value="Salvar">
+                    <input type="button" name="botao-visitante" value="Cancelar">
+                </form>
+            </article>
+        </section>
+    </div>
+</main>

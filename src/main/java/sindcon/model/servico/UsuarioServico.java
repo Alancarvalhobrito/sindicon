@@ -5,9 +5,6 @@ import org.springframework.stereotype.Service;
 import sindcon.model.persistencia.entidade.Usuario;
 import sindcon.model.persistencia.repositorio.UsuarioRepositorio;
 
-/**
- * Created by Thiago on 08/10/2016.
- */
 @Service
 public class UsuarioServico {
     @Autowired

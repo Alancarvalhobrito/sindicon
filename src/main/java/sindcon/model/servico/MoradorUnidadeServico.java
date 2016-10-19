@@ -5,9 +5,6 @@ import org.springframework.stereotype.Service;
 import sindcon.model.persistencia.entidade.MoradorUnidade;
 import sindcon.model.persistencia.repositorio.MoradorUnidadeRepositorio;
 
-/**
- * Created by Thiago on 08/10/2016.
- */
 @Service
 public class MoradorUnidadeServico {
     @Autowired

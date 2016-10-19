@@ -2,9 +2,6 @@ package sindcon.model.persistencia.entidade;
 
 import javax.persistence.*;
 
-/**
- * Created by Thiago on 23/09/2016.
- */
 @Entity
 public class MoradorUnidade {
     @Id

@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import sindcon.model.persistencia.entidade.MoradorUnidade;
 import sindcon.model.servico.MoradorUnidadeServico;
 
-/**
- * Created by Thiago on 08/10/2016.
- */
 @RestController
 @RequestMapping("/moradorUnidade")
 public class MoradorUnidadeControle {

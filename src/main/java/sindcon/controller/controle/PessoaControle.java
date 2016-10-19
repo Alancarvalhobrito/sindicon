@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import sindcon.model.persistencia.entidade.Pessoa;
 import sindcon.model.servico.PessoaServico;
 
-/**
- * Created by Thiago on 08/10/2016.
- */
 @RestController
 @RequestMapping("/pessoa")
 public class PessoaControle {

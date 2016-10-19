@@ -2,9 +2,6 @@ package sindcon.model.persistencia.entidade;
 
 import javax.persistence.*;
 
-/**
- * Created by Thiago on 11/09/2016.
- */
 @Entity
 public class Veiculo {
     @Id

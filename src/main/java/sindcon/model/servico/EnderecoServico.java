@@ -1,9 +1,5 @@
 package sindcon.model.servico;
 
-/**
- * Created by Thiago on 08/10/2016.
- */
-
 import org.springframework.stereotype.Service;
 import sindcon.model.persistencia.entidade.Endereco;
 import sindcon.model.persistencia.repositorio.EnderecoRepositorio;

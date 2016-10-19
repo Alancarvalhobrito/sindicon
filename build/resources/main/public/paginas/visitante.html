@@ -1,0 +1,55 @@
+<main class="main" ng-controller="visitanteController">
+    <div id="visitante">
+        <h1>Cadastro Visitantes</h1>
+        <article id="formulario_visitante">
+            <img id="foto_visitante" src="imagens/user/user5.jpg"/>
+            <form>
+                <p>
+                    <label for="nome">NOME: </label>
+                    <input type="text" name="nome" id="nome" size="30" maxlength="30" placeholder="Nome Completo"/>
+                    <label for="rg">RG: </label>
+                    <input type="text" name="rg" id="rg" size="20" maxlength="30"
+                           placeholder="Registro Geral"/>
+                    <label for="est">UF: </label>
+                    <select nome="est" id="est">
+                        <option label="Selecione">
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="MG">Minas Gerias</option>
+                        </option>
+                    </select>
+                    <label for="cpf">CPF: </label>
+                    <input type="text" name="rg" id="cpf" size="20" maxlength="30" placeholder="CPF"/>
+                </p>
+                <p>
+                    <label for="bloco">BLOCO: </label>
+                    <select nome="bloco" id="bloco">
+                        <option label="Selecione">
+                        <option value="a">A</option>
+                        <option value="b">B</option>
+                        <option value="c">C</option>
+                        </option>
+                    </select>
+                    <label for="casa">CASA: </label>
+                    <select nome="casa" id="casa">
+                        <option label="Selecione">
+                        <option value="001">101</option>
+                        <option value="002">102</option>
+                        <option value="003">103</option>
+                        </option>
+                    </select>
+                </p>
+                <p>
+                    <label for="obs">OBSERVAÇÃO: </label>
+                <p>
+                <textarea name="observacao" id="obs" cols="45" rows="5" placeholder="Deixe aqui sua Observação"
+                          ng-model="visitante.observacao" placeholder="Observação">
+                </textarea>
+                </p>
+                <button type="submit" ng-click="addmorador()">Salvar</button>
+                <input type="button" name="botao-visitante" value="Cancelar">
+            </form>
+        </article>
+        <h1>Pesquisa</h1>
+    </div>
+</main>

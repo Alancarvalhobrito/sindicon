@@ -2,13 +2,11 @@ package sindcon.model.persistencia.entidade;
 
 import javax.persistence.*;
 
-/**
- * Created by Thiago on 11/09/2016.
- */
 @Entity
 public class Endereco {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id_endereco")
     private Integer idEndereco;
     private String endereco;
     private String bairro;

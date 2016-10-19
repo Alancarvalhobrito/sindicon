@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import sindcon.model.persistencia.entidade.Funcionario;
 import sindcon.model.servico.FuncionarioServico;
 
-/**
- * Created by Thiago on 08/10/2016.
- */
 @RestController
 @RequestMapping("/funcionario")
 public class FuncionarioControle {

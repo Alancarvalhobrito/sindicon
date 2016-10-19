@@ -11,9 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 import sindcon.model.persistencia.entidade.Veiculo;
 import sindcon.model.servico.VeiculoServico;
 
-/**
- * Created by Thiago on 08/10/2016.
- */
 @RestController
 @RequestMapping("/veiculo")
 public class VeiculoControle {

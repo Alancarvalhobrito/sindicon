@@ -5,9 +5,6 @@ import org.springframework.stereotype.Service;
 import sindcon.model.persistencia.entidade.Acesso;
 import sindcon.model.persistencia.repositorio.AcessoRepositorio;
 
-/**
- * Created by Thiago on 08/10/2016.
- */
 @Service
 public class AcessoServico {
     @Autowired

@@ -4,9 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.Collection;
 
-/**
- * Created by Thiago on 23/09/2016.
- */
 @Entity
 public class Unidade {
     @Id

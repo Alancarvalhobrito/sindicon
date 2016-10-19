@@ -5,9 +5,6 @@ import org.springframework.stereotype.Service;
 import sindcon.model.persistencia.entidade.Veiculo;
 import sindcon.model.persistencia.repositorio.VeiculoRepositorio;
 
-/**
- * Created by Thiago on 08/10/2016.
- */
 @Service
 public class VeiculoServico {
     @Autowired

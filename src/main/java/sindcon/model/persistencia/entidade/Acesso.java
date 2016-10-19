@@ -3,9 +3,6 @@ package sindcon.model.persistencia.entidade;
 import javax.persistence.*;
 import java.util.Date;
 
-/**
- * Created by Thiago on 12/09/2016.
- */
 @Entity
 public class Acesso {
     @Id

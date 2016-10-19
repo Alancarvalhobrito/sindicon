@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto Sindicon</title>
+    <!-- Css -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/estilo.css" media="screen"/>
+    <!-- Script -->
+    <script type="text/javascript" src="js/bibliotecas/angular.min.js"></script>
+    <script type="text/javascript" src="js/bibliotecas/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/bibliotecas/angular-resource.min.js"></script>
+</head>
+<!-- Body -->
+<body ng-app="app">
+<!-- Content -->
+<div id="content">
+    <!-- Header -->
+    <header id="header">
+        <div id="logotipo">
+            <a href="index.html">
+                <img id="imgLogo" src="imagens/logo1.png">
+            </a>
+        </div>
+    </header>
+    <!-- Navegation -->
+    <nav id="navbar">
+        <div id="menu">
+            <a ui-sref="morador">
+                <i class="material-icons">group</i>
+                <span>Morador</span>
+            </a>
+            <a ui-sref="visitante">
+                <i class="material-icons">directions_walk</i>
+                <span>Visitante</span>
+            </a>
+            <a ui-sref="funcionario">
+                <i class="material-icons">person_outline</i>
+                <span>Funcionário</span>
+            </a>
+            <a ui-sref="relatorio">
+                <i class="material-icons">library_books</i>
+                <span>Relatorio</span>
+            </a>
+        </div>
+    </nav>
+    <div ui-view></div>
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Copyright 2016 - Projeto Sindcon</p>
+    </footer>
+</div>
+<!-- Script (Controllers e apps) -->
+<script type="text/javascript" src="js/controle/homeCtrl.js"></script>
+<script type="text/javascript" src="js/controle/moradorCtrl.js"></script>
+<script type="text/javascript" src="js/controle/visitanteCtrl.js"></script>
+<script type="text/javascript" src="js/controle/funcionarioCtrl.js"></script>
+<script type="text/javascript" src="js/controle/relatorioCtrl.js"></script>
+<script type="text/javascript" src="js/servico/moradorService.js"></script>
+<script type="text/javascript" src="js/configuracao/appRoutes.js"></script>
+<script type="text/javascript" src="js/configuracao/app.js"></script>
+</body>
+</html>

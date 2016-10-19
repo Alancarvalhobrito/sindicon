@@ -4,9 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.Collection;
 
-/**
- * Created by Thiago on 11/09/2016.
- */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Pessoa {
