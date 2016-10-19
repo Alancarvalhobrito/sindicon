@@ -1,6 +1,7 @@
 angular.module('moradorCtrl', [])
     .controller('moradorController', ['$scope', '$state', 'moradorService', function ($scope, $state, moradorService) {
         $scope.moradores = moradorService.getmorador();
+        $scope.moradores = moradorService.getmorador();
 
         $scope.addmorador = function () {
             $scope.submitted = true;

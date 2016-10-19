@@ -34,12 +34,12 @@ angular.module('appRouters', [])
                 controller: 'funcionarioController'
             })
 
-            .state('relatorio', {
-                url: '/relatorio',
+            .state('unidade', {
+                url: '/unidade',
                 params: {
                     param1: null
                 },
-                templateUrl: 'paginas/relatorio.html',
-                controller: 'relatorioController'
+                templateUrl: 'paginas/unidade.html',
+                controller: 'unidadeController'
             });
     }]);
