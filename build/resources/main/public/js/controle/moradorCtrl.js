@@ -1,36 +1,35 @@
 angular.module('moradorCtrl', [])
     .controller('moradorController', ['$scope', '$state', 'moradorService', function ($scope, $state, moradorService) {
-        $scope.moradores = moradorService.getmorador();
-        $scope.moradores = moradorService.getmorador();
+        $scope.moradores = moradorService.getMorador();
 
-        $scope.addmorador = function () {
+        $scope.addMorador = function () {
             $scope.submitted = true;
             console.log($scope.morador);
 
-            moradorService.createmorador($scope.morador, function () {
-                console.log(moradorService.getmorador());
+            moradorService.createMorador($scope.morador, function () {
+                console.log(moradorService.getMorador());
             });
             $scope.morador = {};
             $scope.submitted = false;
         };
 
-        $scope.deletemorador = function (morador) {
-            moradorService.removemorador(morador, function (data) {
-                $scope.moradores = moradorService.getmorador();
+        $scope.deleteMorador = function (morador) {
+            moradorService.removeMorador(morador, function (data) {
+                $scope.moradores = moradorService.getMorador();
             });
 
-            $scope.moradores = moradorService.getmorador();
+            $scope.moradores = moradorService.getMorador();
         }
 
-        $scope.getCurrentmorador = function (datamorador) {
+        $scope.getCurrentMorador = function (dataMorador) {
             $scope.isEdit = true;
-            var data = datamorador;
+            var data = dataMorador;
             $scope.morador = data;
         }
 
-        $scope.editmorador = function () {
-            moradorService.updatemorador($scope.morador, function (data) {
-                console.log(moradorService.getmorador());
+        $scope.editMorador = function () {
+            moradorService.updateMorador($scope.morador, function (data) {
+                console.log(moradorService.getMorador());
             });
 
             $scope.setEdit();

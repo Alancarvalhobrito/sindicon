@@ -21,6 +21,7 @@ public class Pessoa {
     @Column(name = "telefone_movel")
     private String telefoneMovel;
     private String email;
+    private String observacao;
     @Column(name = "tipo_pessoa")
     private char tipoPessoa;
 
@@ -97,6 +98,12 @@ public class Pessoa {
     }
     public char getTipoPessoa() {
         return tipoPessoa;
+    }
+    public String getObservacao() {
+        return observacao;
+    }
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
     }
     public void setTipoPessoa(char tipoPessoa) {
         this.tipoPessoa = tipoPessoa;

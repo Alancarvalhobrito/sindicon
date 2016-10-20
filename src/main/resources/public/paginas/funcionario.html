@@ -1,3 +1,74 @@
-<main class="main">
-    Funcionario
+<main class="main" ng-controller="funcionarioController">
+    <div id="funcionario">
+        <h1>Cadastro Funcionarios</h1>
+        <article id="formulario_funcionario">
+            <img id="foto_funcionario" src="imagens/user/user4.jpg"/>
+            <form>
+                <p>
+                    <input type="text" name="matricula" id="matricula" size="20" maxlength="30" placeholder="Matricula" ng-model="funcionario.nome"/>
+                    <label for="cargo">CARGO: </label>
+                    <select nome="cargo" id="cargo">
+                        <option label="Selecione">
+                        <option value="PT">PORTEIRO</option>
+                        <option value="ADMINISTRADOR">ADMINISTRADOR</option>
+                        <option value="SINDICO">SÍNDICO</option>
+                        </option>
+                    </select>
+                </p>
+                <p>
+                    <label for="nome">NOME: </label>
+                    <input type="text" name="nome" id="nome" size="20" maxlength="30" placeholder="Nome Completo"/>
+                    <label for="tel">TELEFONE: </label>
+                    <input type="text" name="telefone" id="tel" size="20" maxlength="30" placeholder="Telefone"/>
+                    <label for="cel">CELULAR: </label>
+                    <input type="text" name="celular" id="cel" size="20" maxlength="30" placeholder="Ceular"/>
+                    <label for="mail">EMAIL: </label>
+                    <input type="text" name="email" id="mail" size="20" maxlength="30" placeholder="Email"/>
+                </p>
+                <p>
+                    <label for="rg">RG: </label>
+                    <input type="text" name="rg" id="rg" size="20" maxlength="30" placeholder="Registro Geral"/>
+                    <label for="orgexp">ORGÃO EXPEDIDOR: </label>
+                    <input type="text" name="orgexp" id="orgexp" size="20" maxlength="30"
+                           placeholder="Orgão Expedidor"/>
+                    <label for="uf">UF: </label>
+                    <select nome="uf" id="uf">
+                        <option label="Selecione">
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
+                        <option value="MG">MG</option>
+                        </option>
+                    </select>
+                    <label for="cpf">CPF: </label>
+                    <input type="text" name="cpf" id="cpf" size="20" maxlength="30" placeholder="CPF"/>
+                </p>
+                <p>
+                    <label for="endereco">ENDEREÇO: </label>
+                    <input type="text" name="endereco" id="endereco" size="20" maxlength="30"
+                           placeholder="Endereço"/>
+                    <label for="cep">CEP: </label>
+                    <input type="text" name="cep" id="cep" size="20" maxlength="30" placeholder="Endereço"/>
+                    <label for="cidade">CIDADE: </label>
+                    <select nome="cidade" id="cidade">
+                        <option label="Selecione">
+                        <option value="RF1">RIACHO FUNDO 1</option>
+                        <option value="W3">W3 SUL</option>
+                        <option value="Gua">GUARA</option>
+                        </option>
+                    </select>
+                    <label for="estado">ESTADO: </label>
+                    <select nome="estado" id="estado">
+                        <option label="Selecione">
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="MG">Minas Gerias</option>
+                        </option>
+                    </select>
+                </p>
+                <button type="submit" ng-click="addmorador()">Salvar</button>
+                <input type="button" name="botao-visitante" value="Cancelar">
+            </form>
+        </article>
+        <h1>Pesquisa</h1>
+    </div>
 </main>

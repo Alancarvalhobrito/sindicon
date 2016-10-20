@@ -31,7 +31,7 @@ angular.module('moradorService', ['ngResource'])
     .service('moradorService', ['moradorProxy', function (moradorProxy) {
         var self = this;
 
-        self.getmorador = function (morador, successCallback, error) {
+        self.getMorador = function (morador, successCallback, error) {
             return moradorProxy.query({}, function (data) {
                 console.log(data);
             }, function (err) {
@@ -39,15 +39,15 @@ angular.module('moradorService', ['ngResource'])
             });
         };
 
-        self.createmorador = function (morador, successCallback, error) {
+        self.createMorador = function (morador, successCallback, error) {
             moradorProxy.save(morador, successCallback, error);
         };
 
-        self.updatemorador = function (morador, successCallback, error) {
+        self.updateMorador = function (morador, successCallback, error) {
             moradorProxy.update(morador, successCallback, error);
         };
 
-        self.removemorador = function (moradorId) {
+        self.removeMorador = function (moradorId) {
             moradorProxy.delete({
                 id: moradorId
             });

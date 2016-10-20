@@ -1,1 +1,1 @@
-angular.module('app', ['ui.router','appRouters','homeCtrl','moradorCtrl','visitanteCtrl','funcionarioCtrl','relatorioCtrl','moradorService','unidadeCtrl','unidadeService']);
+angular.module('app', ['ui.router','appRouters','homeCtrl','acessoCtrl','acessoService','enderecoCtrl','enderecoService','funcionarioCtrl','funcionarioService','moradorCtrl','moradorService','pessoaService','pessoaCtrl','unidadeCtrl','unidadeService','usuarioService','usuarioCtrl','veiculoCtrl','veiculoService','visitanteCtrl','visitanteService']);
