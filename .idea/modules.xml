@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sindcon.iml" filepath="$PROJECT_DIR$/.idea/modules/sindcon.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sindcon_main.iml" filepath="$PROJECT_DIR$/.idea/modules/sindcon_main.iml" group="sindcon" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sindcon_test.iml" filepath="$PROJECT_DIR$/.idea/modules/sindcon_test.iml" group="sindcon" />
     </modules>
   </component>
 </project>

@@ -1,1 +1,1 @@
-angular.module('app', ['ui.router','appRouters','moradorCtrl','moradorService']);
+angular.module('app', ['ui.router','appRouters','moradorCtrl','moradorService','testeCtrl']);
