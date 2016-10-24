@@ -1,3 +1,34 @@
-<main class="main" ng-controller="listaController">
-    <h1>Olá Teste</h1>
-</main>
+<!-- https://scotch.io/tutorials/how-to-correctly-use-bootstrapjs-and-angularjs-together -->
+<div class="container" ng-controller="listaController">
+    <div class="text-center">
+        <p class="text-success">Funcionando</p>
+    </div>
+
+    <h2>Buttons</h2>
+    <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary" ng-model="bigData.breakfast" ng-click="bigData.breakfast = !bigData.breakfast"
+               btn-checkbox>
+            Breakfast
+        </label>
+        <label class="btn btn-primary" ng-model="bigData.lunch" ng-click="bigData.lunch = !bigData.lunch" btn-checkbox>
+            Lunch
+        </label>
+        <label class="btn btn-primary" ng-model="bigData.dinner" ng-click="bigData.dinner = !bigData.dinner"
+               btn-checkbox>
+            Dinner
+        </label>
+    </div>
+
+    <pre><code>{{ bigData | json }}</code></pre>
+
+    <h2>Collapse</h2>
+
+    <a href="#" class="btn btn-primary" ng-click="isCollapsed = !isCollapsed">
+        Toggle Panel
+    </a>
+    <pre><code>{{ isCollapsed }}</code></pre>
+
+    <div>
+        <img src="imagens/user/user5.jpg" class="img-thumbnail" alt="Cinque Terre" width="300" height="300">
+    </div>
+</div>
