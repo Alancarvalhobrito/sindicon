@@ -1,0 +1,20 @@
+<main class="main" ng-controller="unidadeController">
+    <div id="unidade">
+        <h1>Cadastro Unidade</h1>
+        <article id="formulario_unidade">
+            <form>
+                <p>
+                    <label for="bloco">Bloco: </label>
+                    <input type="text" name="bloco" id="bloco" size="10" maxlength="1" placeholder="Bloco"
+                           ng-model="unidade.bloco"/></p>
+                <p>
+                    <label for="numeroCasa">RG: </label>
+                    <input type="number" name="numero_casa" id="numeroCasa" size="4" maxlength="5"
+                           placeholder="Numero da Casa" ng-model="unidade.numeroCasa"/>
+                </p>
+                <button type="submit" ng-click="addUnidade()">Salvar</button>
+                <input type="button" name="botao-unidade" value="Cancelar">
+            </form>
+        </article>
+    </div>
+</main>

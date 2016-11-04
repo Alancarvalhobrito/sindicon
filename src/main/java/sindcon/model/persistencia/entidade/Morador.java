@@ -9,15 +9,16 @@ import java.util.Collection;
 public class Morador extends Pessoa {
 
     //Relacionamentos:
-    @OneToMany(mappedBy = "morador")
-    @JsonIgnore
-    private Collection<MoradorUnidade> moradoresUnidades;
 
-    //Gets e Sets:
-    public Collection<MoradorUnidade> getMoradoresUnidades() {
-        return moradoresUnidades;
+    @ManyToOne
+    @JoinColumn(name = "unidade_id_unidade")
+    private Unidade unidade;
+
+    public Unidade getUnidade() {
+        return unidade;
     }
-    public void setMoradoresUnidades(Collection<MoradorUnidade> moradoresUnidades) {
-        this.moradoresUnidades = moradoresUnidades;
+
+    public void setUnidade(Unidade unidade) {
+        this.unidade = unidade;
     }
 }

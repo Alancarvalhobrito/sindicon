@@ -34,6 +34,14 @@ angular.module('appRouters', [])
                 controller: 'funcionarioController'
             })
 
+            .state('relatorio', {
+                url: '/relatorio',
+                params: {
+                    param1: null
+                },
+                templateUrl: 'paginas/relatorio.html'
+            })
+
             .state('unidade', {
                 url: '/unidade',
                 params: {

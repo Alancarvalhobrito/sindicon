@@ -17,7 +17,7 @@ public class Unidade {
     //Relacionamentos:
     @OneToMany(mappedBy = "unidade")
     @JsonIgnore
-    private Collection<MoradorUnidade> moradoresUnidades;
+    private Collection<Morador> moradores;
 
     //Gets e Sets:
     public Integer getIdUnidade() {
@@ -38,10 +38,12 @@ public class Unidade {
     public void setNumeroCasa(Integer numeroCasa) {
         this.numeroCasa = numeroCasa;
     }
-    public Collection<MoradorUnidade> getMoradoresUnidades() {
-        return moradoresUnidades;
+
+    public Collection<Morador> getMoradores() {
+        return moradores;
     }
-    public void setMoradoresUnidades(Collection<MoradorUnidade> moradoresUnidades) {
-        this.moradoresUnidades = moradoresUnidades;
+
+    public void setMoradores(Collection<Morador> moradores) {
+        this.moradores = moradores;
     }
 }

@@ -6,11 +6,13 @@
     <title>Projeto Sindicon</title>
     <!-- Css -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/bootstrap-3.3.7/css/bootstrap.css" media="screen"/>
     <link rel="stylesheet" href="css/estilo.css" media="screen"/>
     <!-- Script -->
     <script type="text/javascript" src="js/bibliotecas/angular.min.js"></script>
     <script type="text/javascript" src="js/bibliotecas/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="js/bibliotecas/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/bibliotecas/ui-bootstrap-tpls-2.2.0.min.js"></script>
 </head>
 <!-- Body -->
 <body ng-app="app">
@@ -18,31 +20,51 @@
 <div id="content">
     <!-- Header -->
     <header id="header">
-        <div id="logotipo">
-            <a href="index.html">
+        <div id="logotipo" class="row">
+            <a href="index.html" class="col-md-12">
                 <img id="imgLogo" src="imagens/logo1.png">
             </a>
         </div>
     </header>
     <!-- Navegation -->
-    <nav id="navbar">
-        <div id="menu">
-            <a ui-sref="morador">
-                <i class="material-icons">group</i>
-                <span>Morador</span>
-            </a>
-            <a ui-sref="visitante">
-                <i class="material-icons">directions_walk</i>
-                <span>Visitante</span>
-            </a>
-            <a ui-sref="funcionario">
-                <i class="material-icons">person_outline</i>
-                <span>Funcionário</span>
-            </a>
-            <a ui-sref="unidade">
-                <i class="material-icons">library_books</i>
-                <span>Unidade</span>
-            </a>
+    <nav id="menu">
+        <div id="test" class="row">
+            <div class="col-md-2 menuIcon">
+                <a class="navbar-form" href="index.html">
+                    <i class="material-icons">business</i>
+                    <div>Home</div>
+                </a>
+            </div>
+            <div class="col-md-2 menuIcon">
+                <a class="navbar-form" ui-sref="morador">
+                    <i class="material-icons">group</i>
+                    <div>Morador</div>
+                </a>
+            </div>
+            <div class="col-md-2 menuIcon">
+                <a class="navbar-form" ui-sref="visitante">
+                    <i class="material-icons">directions_walk</i>
+                    <div>Visitante</div>
+                </a>
+            </div>
+            <div class="col-md-2 menuIcon">
+                <a class="navbar-form" ui-sref="funcionario">
+                    <i class="material-icons">person_outline</i>
+                    <div>Funcionário</div>
+                </a>
+            </div>
+            <div class="col-md-2 menuIcon">
+                <a class="navbar-form" ui-sref="relatorio">
+                    <i class="material-icons">library_books</i>
+                    <div>Relatório</div>
+                </a>
+            </div>
+            <div class="col-md-2 menuIcon">
+                <a class="navbar-form" ui-sref="unidade">
+                    <i class="material-icons">home</i>
+                    <div>Unidade</div>
+                </a>
+            </div>
         </div>
     </nav>
     <div ui-view></div>
