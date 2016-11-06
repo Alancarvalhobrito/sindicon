@@ -1,65 +1,4 @@
-/*!* Page - Home *!*/
-/*#home {*/
-/*min-height: 465px;*/
-/*}*/
 
-/*!* Page - Sidebar*!*/
-/*#sidebar {*/
-/*width: 12%;*/
-/*margin: 3px 1px 0 1px;*/
-/*}*/
-
-/*.cancela {*/
-/*margin: 3px 0;*/
-/*width: 98%;*/
-/*border: 1px solid black;*/
-/*border-radius: 10px;*/
-/*}*/
-
-/*!* Page - Section *!*/
-/*#section {*/
-/*width: 88%;*/
-
-/*}*/
-
-/*.container {*/
-/*padding: 0;*/
-/*margin: 5px;*/
-/*border: 1px solid black;*/
-/*background: #abb9bd;*/
-/*width: 20%;*/
-/*}*/
-
-/*#idPessoa {*/
-/*width: 20%;*/
-/*}*/
-
-/*.fotoPessoa {*/
-/*border: 1px solid black;*/
-/*margin: 6px 0 20px 0;*/
-/*width: 165px;*/
-/*height: 195px;*/
-/*}*/
-
-/*#formulario_home {*/
-/*padding: 10px;*/
-/*margin-top: 5px;*/
-/*border: 1px solid black;*/
-/*width: 41%;*/
-/*height: 434px;*/
-/*}*/
-
-/*#fotoHome {*/
-/*margin: 4px;*/
-/*border: 1px solid black;*/
-/*width: 125px;*/
-/*height: 145px;*/
-/*}*/
-
-/*#formulario_home form {*/
-/*margin-left: 2px;*/
-/*padding: 0 5px;*/
-/*}*/
 
 /*!* Morador *!*/
 /*#morador h1 {*/
@@ -201,7 +140,7 @@ body {
 
 .inputForm {
     width: 75%;
-    box-shadow: 14px 10px 9px -13px rgba(0,0,0,0.85);
+    box-shadow: 14px 10px 9px -13px rgba(0, 0, 0, 0.85);
 }
 
 .main {
@@ -210,21 +149,102 @@ body {
 }
 
 /* -----> Home <----- */
+
+/* Configuração de Layout FlexBox (Colunas,Linhas,Filhas) */
+#sidebar, #pessoa {
+    display: flex;
+    flex-direction: column;
+}
+
+#home, #section, #formulario_home {
+    display: flex;
+    flex-direction: row;
+}
+
+#home > *, #sidebar >, * #section > *, #formulario_home > * {
+    flex: 1 1 auto;
+}
+
+/* Page - Home */
+#home {
+    min-height: 465px;
+}
+
+/* Page - Sidebar*/
+#sidebar {
+    width: 12%;
+    margin: 3px 1px 0 1px;
+}
+
+.cancela {
+    margin: 3px 0;
+    width: 98%;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* Page - Section */
+#section {
+    width: 88%;
+}
+
+.wrapper {
+    padding: 0;
+    margin: 5px;
+    border: 1px solid black;
+    background: #abb9bd;
+    width: 20%;
+}
+
+.fotoPessoa {
+    border: 1px solid black;
+    margin: 6px 0 20px 0;
+    width: 165px;
+    height: 195px;
+}
+
+#formulario_home {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid black;
+    width: 41%;
+    height: 434px;
+}
+
+#fotoHome {
+    margin: 4px;
+    border: 1px solid black;
+    width: 125px;
+    height: 145px;
+}
+
+#formulario_home form {
+    margin-left: 2px;
+    padding: 0 5px;
+}
 /* -----> Morador <----- */
-#formulario_morador{
+.formularios {
     padding-top: 30px;
     border-radius: 5px;
     background: #72a0af;
-    box-shadow: 11px 10px 5px -9px rgba(0,0,0,0.57);
+    box-shadow: 11px 10px 5px -9px rgba(0, 0, 0, 0.57);
 
 }
+
 .fotoForm {
     width: 150px;
+    height: 120px;
+    background-size: cover;
 }
-#morador{
+
+.layout_form {
     width: 50%;
 }
+
 /* -----> Visitante <----- */
+#visitante {
+    width: 50%;
+}
 /* -----> Funcionário <----- */
 /* -----> Relatório <----- */
 /* -----> Unidade <----- */

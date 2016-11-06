@@ -5,13 +5,14 @@ import javax.persistence.*;
 @Entity
 @PrimaryKeyJoinColumn(name="id_visitante", referencedColumnName = "id_pessoa")
 public class Visitante extends Pessoa {
-    private String observação;
+    private String observacao;
 
     //Gets e Sets:
-    public String getObservação() {
-        return observação;
+    public String getObservacao() {
+        return observacao;
     }
-    public void setObservação(String observação) {
-        this.observação = observação;
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
     }
 }

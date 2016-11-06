@@ -10,6 +10,7 @@ angular.module('moradorCtrl', [])
                 return;
             }
             console.log($scope.morador);
+
             moradorService.createMorador($scope.morador, function () {
                 console.log(moradorService.getMorador());
             });
@@ -25,7 +26,6 @@ angular.module('moradorCtrl', [])
             moradorService.removeMorador(morador, function (data) {
                 $scope.moradores = moradorService.getMorador();
             });
-
             $scope.moradores = moradorService.getMorador();
         };
 

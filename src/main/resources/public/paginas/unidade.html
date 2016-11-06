@@ -1,20 +1,28 @@
 <main class="main" ng-controller="unidadeController">
-    <div id="unidade">
-        <h1>Cadastro Unidade</h1>
-        <article id="formulario_unidade">
-            <form>
-                <p>
-                    <label for="bloco">Bloco: </label>
-                    <input type="text" name="bloco" id="bloco" size="10" maxlength="1" placeholder="Bloco"
-                           ng-model="unidade.bloco"/></p>
-                <p>
-                    <label for="numeroCasa">RG: </label>
-                    <input type="number" name="numero_casa" id="numeroCasa" size="4" maxlength="5"
-                           placeholder="Numero da Casa" ng-model="unidade.numeroCasa"/>
-                </p>
-                <button type="submit" ng-click="addUnidade()">Salvar</button>
-                <input type="button" name="botao-unidade" value="Cancelar">
-            </form>
+    <div class="container layout_form">
+        <h1 class="titulo">Cadastro Unidade</h1>
+        <article class="row formularios">
+            <div class="col-md-12">
+                <form class="form-group">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label class="control-label" for="bloco">Unidade: </label>
+                            <input class="form-control inputForm" type="text" name="bloco" id="bloco" size="10"
+                                   maxlength="1" placeholder="Bloco"
+                                   ng-model="unidade.bloco"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="numeroCasa">Número: </label>
+                            <input class="form-control inputForm" type="number" name="numero_casa" id="numeroCasa"
+                                   size="4"
+                                   maxlength="5"
+                                   placeholder="Numero da Casa" ng-model="unidade.numeroCasa"/>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit" ng-click="addUnidade()">Salvar</button>
+                    <input class="btn btn-primary" type="button" name="botao-unidade" value="Cancelar">
+                </form>
+            </div>
         </article>
     </div>
 </main>

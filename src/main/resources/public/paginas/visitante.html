@@ -1,55 +1,73 @@
 <main class="main" ng-controller="visitanteController">
-    <div id="visitante">
-        <h1>Cadastro Visitantes</h1>
-        <article id="formulario_visitante">
-            <img id="foto_visitante" src="imagens/user/user5.jpg"/>
-            <form>
-                <p>
-                    <label for="nome">NOME: </label>
-                    <input type="text" name="nome" id="nome" size="30" maxlength="30" placeholder="Nome Completo"/>
-                    <label for="rg">RG: </label>
-                    <input type="text" name="rg" id="rg" size="20" maxlength="30"
-                           placeholder="Registro Geral"/>
-                    <label for="est">UF: </label>
-                    <select nome="est" id="est">
-                        <option label="Selecione">
-                        <option value="RJ">Rio de Janeiro</option>
-                        <option value="SP">São Paulo</option>
-                        <option value="MG">Minas Gerias</option>
-                        </option>
-                    </select>
-                    <label for="cpf">CPF: </label>
-                    <input type="text" name="rg" id="cpf" size="20" maxlength="30" placeholder="CPF"/>
-                </p>
-                <p>
-                    <label for="bloco">BLOCO: </label>
-                    <select nome="bloco" id="bloco">
-                        <option label="Selecione">
-                        <option value="a">A</option>
-                        <option value="b">B</option>
-                        <option value="c">C</option>
-                        </option>
-                    </select>
-                    <label for="casa">CASA: </label>
-                    <select nome="casa" id="casa">
-                        <option label="Selecione">
-                        <option value="001">101</option>
-                        <option value="002">102</option>
-                        <option value="003">103</option>
-                        </option>
-                    </select>
-                </p>
-                <p>
-                    <label for="obs">OBSERVAÇÃO: </label>
-                <p>
-                <textarea name="observacao" id="obs" cols="45" rows="5" placeholder="Deixe aqui sua Observação"
-                          ng-model="visitante.observacao" placeholder="Observação">
-                </textarea>
-                </p>
-                <button type="submit" ng-click="addmorador()">Salvar</button>
-                <input type="button" name="botao-visitante" value="Cancelar">
-            </form>
+    <div class="container layout_form">
+        <h1 class="titulo">Cadastrar Visitante</h1>
+        <article class="row formularios">
+            <img class="col-md-3 img-circle fotoForm" src="imagens/user/user5.jpg"/>
+            <div class="col-md-9">
+                <form class="form-group" name="visitanteForm" novalidate>
+                    <p class="message" ng-show="visitanteForm.$invalid && submitted"></p>
+                    <div class="form-group">
+                        <label class="control-label" for="nome">NOME: </label>
+                        <input class="form-control inputForm" type="text" name="nome" id="nome" maxlength="30"
+                               placeholder="Nome Completo" required
+                               ng-class="{'hasError' : visitanteForm.nome.$invalid && submitted}"
+                               ng-model="visitante.nome"/>
+                        <p class="obrigatorio" ng-show="visitanteForm.nome.$invalid && submitted"></p>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="rg">RG: </label>
+                        <input class="form-control inputForm" type="text" name="rg" id="rg" maxlength="30"
+                               placeholder="Registro Geral" ng-model="visitante.rg"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="ufRg">UF: </label>
+                        <select class="form-control inputForm" name="ufRg" id="ufRg" ng-model="visitante.ufRg">
+                            <option value="" disabled>Selecione</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="DF">Distrito Federal</option>
+                            <option value="GO">Goiás</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="cpf">CPF: </label>
+                        <input class="form-control inputForm" type="text" name="cpf" id="cpf" maxlength="11"
+                               placeholder="CPF" ng-model="visitante.cpf"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="observacao">OBSERVAÇÃO: </label>
+                        <textarea class="form-control inputForm" name="observacao" id="observacao" id="obs" cols="45"
+                                  rows="5"
+                                  placeholder="Deixe aqui sua Observação" ng-model="visitante.observacao"></textarea>
+                    </div>
+                    <button class="btn btn-primary" type="submit" ng-click="addVisitante()">Salvar</button>
+                    <button class="btn btn-primary" type="reset" name="botao-visitante">Cancelar</button>
+                </form>
+            </div>
         </article>
-        <h1>Pesquisa</h1>
+        <h1 class="titulo">Consultar Visitante</h1>
+        <article id="table_visitante">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>RG</th>
+                    <th>UF</th>
+                    <th>CPF</th>
+                    <th>OBSERVACAO</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="visitante in visitantes">
+                    <td>{{visitante.nome}}</td>
+                    <td>{{visitante.rg}}</td>
+                    <td>{{visitante.ufRg}}</td>
+                    <td>{{visitante.cpf}}</td>
+                    <td>{{visitante.observacao}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
     </div>
 </main>
