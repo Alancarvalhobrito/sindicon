@@ -2,7 +2,7 @@
     <div class="container layout_form">
         <h1 class="titulo">Cadastrar Visitante</h1>
         <article class="row formularios">
-            <img class="col-md-3 img-circle fotoForm" src="imagens/user/user5.jpg"/>
+            <img class="col-md-3 img-circle fotoForm" src="imagens/user/user6.jpg"/>
             <div class="col-md-9">
                 <form class="form-group" name="visitanteForm" novalidate>
                     <p class="message" ng-show="visitanteForm.$invalid && submitted"></p>
@@ -28,6 +28,8 @@
                             <option value="MG">Minas Gerais</option>
                             <option value="DF">Distrito Federal</option>
                             <option value="GO">Goiás</option>
+                            <option value="PI">Piauí</option>
+                            <option value="MA">Maranhão</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -35,10 +37,30 @@
                         <input class="form-control inputForm" type="text" name="cpf" id="cpf" maxlength="11"
                                placeholder="CPF" ng-model="visitante.cpf"/>
                     </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="bloco">Bloco: </label>
+                        <select class="form-control inputForm" ng-options="unidade.bloco for unidade in unidades"
+                                id="bloco" required ng-class="{'hasError' : visitanteForm.bloco.$invalid && submitted}"
+                                ng-model="visitante.bloco">
+                            <option value="" disabled>Selecione</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="numeroCasa">Numero da Casa: </label>
+                        <select class="form-control inputForm"
+                                ng-options="unidade.numeroCasa for unidade in unidades"
+                                id="numeroCasa" required
+                                ng-class="{'hasError' : visitanteForm.numeroCasa.$invalid && submitted}"
+                                ng-model="visitante.numeroCasa">
+                            <option value="" disabled>Selecione</option>
+                        </select>
+                    </div>
                     <div class="form-group">
                         <label class="control-label" for="observacao">OBSERVAÇÃO: </label>
                         <textarea class="form-control inputForm" name="observacao" id="observacao" id="obs" cols="45"
-                                  rows="5"
+                                  rows="5" maxlength="65"
                                   placeholder="Deixe aqui sua Observação" ng-model="visitante.observacao"></textarea>
                     </div>
                     <button class="btn btn-primary" type="submit" ng-click="addVisitante()">Salvar</button>
@@ -46,28 +68,54 @@
                 </form>
             </div>
         </article>
+    </div>
+
+    <div class="list">
         <h1 class="titulo">Consultar Visitante</h1>
-        <article id="table_visitante">
-            <table class="table table-striped">
-                <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>RG</th>
-                    <th>UF</th>
-                    <th>CPF</th>
-                    <th>OBSERVACAO</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="visitante in visitantes">
-                    <td>{{visitante.nome}}</td>
-                    <td>{{visitante.rg}}</td>
-                    <td>{{visitante.ufRg}}</td>
-                    <td>{{visitante.cpf}}</td>
-                    <td>{{visitante.observacao}}</td>
-                </tr>
-                </tbody>
-            </table>
+        <article class="row">
+            <div class="col-md-12 form-group">
+                <label class="control-label" for="pesquisa">Pesquisar: </label>
+                <input type="text" id="pesquisa" class="form-control inputSearch" placeholder="Pesquisar Visitante">
+            </div>
+            <div class="col-md-12">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>RG</th>
+                        <th>UF</th>
+                        <th>CPF</th>
+                        <th>Observação</th>
+                        <th>Bloco</th>
+                        <th>Numero da casa</th>
+                        <th>Editar / Apagar</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="visitante in visitantes">
+                        <td>{{visitante.nome}}</td>
+                        <td>{{visitante.rg}}</td>
+                        <td>{{visitante.ufRg}}</td>
+                        <td>{{visitante.cpf}}</td>
+                        <td>{{visitante.observacao}}</td>
+                        <td>{{visitante.bloco}}</td>
+                        <td>{{visitante.numeroCasa}}</td>
+                        <td>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-warning">
+                                        <i class="button_list material-icons">mode_edit</i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="button_list material-icons">delete_forever</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </article>
     </div>
 </main>

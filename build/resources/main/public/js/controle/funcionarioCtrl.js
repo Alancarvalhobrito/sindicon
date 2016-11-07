@@ -9,8 +9,12 @@ angular.module('funcionarioCtrl', [])
             funcionarioService.createFuncionario($scope.funcionario, function () {
                 console.log(funcionarioService.getFuncionario());
             });
+            $scope.message = true;
             $scope.funcionario = {};
             $scope.submitted = false;
+            $scope.back = function () {
+                $scope.message = false;
+            };
         };
 
         $scope.deleteFuncionario = function (funcionario) {

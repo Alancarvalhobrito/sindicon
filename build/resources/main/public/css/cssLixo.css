@@ -68,3 +68,82 @@
 /*min-height: 450px;*/
 /*box-shadow: inset 10px 10px 29px -14px rgba(0, 0, 0, 0.72);*/
 /*}*/
+
+/*!* Morador *!*/
+/*#morador h1 {*/
+/*text-align: center;*/
+/*}*/
+
+/*#formulario_morador {*/
+/*border: 1px solid black;*/
+/*padding: 10px;*/
+/*}*/
+
+/*#formulario_morador form {*/
+/*margin-left: 5px;*/
+/*}*/
+
+/*#foto_morador {*/
+/*border: 1px solid black;*/
+/*margin: 5px;*/
+/*width: 165px;*/
+/*height: 195px;*/
+/*}*/
+
+/*#table_morador{*/
+/*border: 1px solid black;*/
+/*padding: 10px;*/
+/*}*/
+
+/*!* Visitante *!*/
+/*#visitante h1 {*/
+/*text-align: center;*/
+/*}*/
+
+/*#formulario_visitante {*/
+/*border: 1px solid black;*/
+/*padding: 10px;*/
+/*}*/
+
+/*#formulario_visitante form {*/
+/*margin-left: 5px;*/
+/*}*/
+
+/*#foto_visitante {*/
+/*border: 1px solid black;*/
+/*margin: 5px;*/
+/*width: 165px;*/
+/*height: 195px;*/
+/*}*/
+
+/*!* Footer *!*/
+/*#footer {*/
+/*background: #141414;*/
+/*color: #fff;*/
+/*height: 40px;*/
+/*}*/
+
+/*#footer p {*/
+/*margin: 0;*/
+/*padding: 5px;*/
+/*font-family: Verdana;*/
+/*}*/
+
+/*!* Morador-teste *!*/
+/*.success{*/
+/*color: #00b33c;*/
+/*font-weight: bold;*/
+/*text-align: center;*/
+/*}*/
+
+/*.message{*/
+/*color: #ff1a1a;*/
+/*font-weight: bold;*/
+/*}*/
+/*.hasError{*/
+/*border: 2px solid red;*/
+/*}*/
+
+/*input,select,textarea{*/
+/*border-radius: 5px;*/
+/*}*/
