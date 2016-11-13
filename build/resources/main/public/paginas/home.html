@@ -11,59 +11,88 @@
                 Entrada:
             </article>
             <article id="pessoa">
-                <img class="fotoPessoa" src="imagens/user/user1.jpg">
-                <img class="fotoPessoa" src="imagens/user/user4.jpg"/>
+                <img class="fotoPessoa" src="imagens/user/user0.jpg">
+                <img class="fotoPessoa" src="imagens/user/user0.jpg"/>
             </article>
             <article class="wrapper">
                 Saída:
             </article>
             <article id="formulario_home">
-                <img id="fotoHome" src="imagens/user/user2.jpg">
+                <img id="fotoHome" src="imagens/user/user0.jpg">
                 <form>
-                    <div>
-                        <label for="nome">NOME: </label>
-                        <input type="text" name="nome" id="nome" size="30" maxlength="30" placeholder="Nome Completo"
+                    <h4 class="titulo">Cadastrar Visitante</h4>
+                    <div class="row form-group">
+                        <label class="col-md-2 control-label" for="nome">Nome </label>
+                        <input class="col-md-10 inputFormHome form-control" type="text" name="nome" id="nome" size="30"
+                               maxlength="30" placeholder="Nome Completo"
                                ng-model="visitante.nome"/>
                     </div>
-                    <div>
-                        <label for="rg">RG: </label>
-                        <input type="text" name="rg" id="rg" size="20" maxlength="30" placeholder="Registro Geral"
+                    <div class="row form-group">
+                        <label class="col-md-2 control-label" for="rg">RG </label>
+                        <input class="col-md-10 inputFormHome form-control" type="text" name="rg" id="rg"
+                               size="20" maxlength="30" placeholder="Registro Geral"
                                ng-model="visitante.rg"/>
-
-                        <label for="ufRG">UF: </label>
-                        <select nome="ufRg" id="ufRG" ng-model="visitante.ufRg">
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-md-2 control-label" for="ufRG">UF </label>
+                        <select class="col-md-10 inputFormHome form-control" nome="ufRg" id="ufRG"
+                                ng-model="visitante.ufRg">
                             <option value="" disabled>Selecione</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="GO">Goiás</option>
-                            <option value="PI">Piauí</option>
-                            <option value="MA">Maranhão</option>
+                            <option value="ac">Acre</option>
+                            <option value="al">Alagoas</option>
+                            <option value="am">Amazonas</option>
+                            <option value="ap">Amapá</option>
+                            <option value="ba">Bahia</option>
+                            <option value="ce">Ceará</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="es">Espírito Santo</option>
+                            <option value="go">Goiás</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="pa">Pará</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="pr">Paraná</option>
+                            <option value="pe">Pernambuco</option>
+                            <option value="pi">Piauí</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="rn">Rio Grande do Norte</option>
+                            <option value="ro">Rondônia</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="rr">Roraima</option>
+                            <option value="sc">Santa Catarina</option>
+                            <option value="se">Sergipe</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="to">Tocantins</option>
                         </select>
                     </div>
-                    <div>
-                        <label for="cpf">CPF: </label>
-                        <input type="text" name="rg" id="cpf" size="20" maxlength="11" placeholder="CPF"
+                    <div class="row form-group">
+                        <label class="col-md-2 control-label" for="cpf">CPF </label>
+                        <input class="col-md-10 inputFormHome form-control" type="text" name="rg" id="cpf" size="20"
+                               maxlength="11" placeholder="CPF"
                                ng-model="visitante.cpf"/>
                     </div>
-                    <div>
-                        <label for="bloco">BLOCO: </label>
-                        <select nome="bloco" ng-options="unidade.bloco for unidade in unidades" id="bloco"
+                    <div class="row form-group inline">
+                        <label class="col-md-2 control-label" for="bloco">Bloco </label>
+                        <select class="col-md-10 inputFormHomeInline form-control" nome="bloco"
+                                ng-options="unidade.bloco for unidade in unidades" id="bloco"
                                 ng-model="visitante.bloco">
                             <option value="" disabled>Selecione</option>
                         </select>
-
-                        <label for="numeroCasa">Casa: </label>
-                        <select nome="numeroCasa" ng-options="unidade.numeroCasa for unidade in unidades"
+                        <label class="col-md-2 control-label" for="numeroCasa">Casa </label>
+                        <select class="col-md-10 inputFormHomeInline form-control" nome="numeroCasa"
+                                ng-options="unidade.numeroCasa for unidade in unidades"
                                 id="numeroCasa"
                                 ng-model="visitante.numeroCasa">
                             <option value="" disabled>Selecione</option>
                         </select>
                     </div>
-                    <div>
-                        <label for="observacao">OBSERVAÇÃO: </label>
-                        <textarea name="observacao" id="observacao" id="obs" cols="45" rows="5" maxlength="65"
+                    <div class="form-group">
+                        <label class="control-label" for="observacao">Observação</label>
+                        <textarea class="form-control inputFormHomeArea" name="observacao" id="observacao" id="obs"
+                                  cols="45" rows="5"
+                                  maxlength="65"
                                   placeholder="Deixe aqui sua Observação" ng-model="visitante.observacao"></textarea>
                     </div>
                     <button class="btn btn-primary" type="submit" ng-click="addVisitante()">Salvar</button>

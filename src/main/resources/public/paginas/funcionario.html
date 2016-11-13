@@ -1,25 +1,25 @@
 <main class="main" ng-controller="funcionarioController">
     <div class="container layout_form">
-        <h1 class="titulo">Cadastrar Funcionarios</h1>
+        <h1 class="titulo">Cadastrar Funcionários</h1>
         <article class="row formularios">
-            <img class="col-md-3 img-circle fotoForm" id="foto_funcionario" src="imagens/user/user3.jpg"/>
+            <img class="col-md-3 img-rounded fotoForm" id="foto_funcionario" src="imagens/user/user0.jpg"/>
             <div class="col-md-9">
                 <form class="form-group" name="funcionarioForm" novalidate>
                     <p class="message" ng-show="funcionarioForm.$invalid && submitted"></p>
                     <div class="form-group">
-                        <label class="control-label" for="matricula">MATRÍCULA: </label>
+                        <label class="control-label" for="matricula">Matrícula: </label>
                         <input class="form-control inputForm" type="text" name="matricula" id="matricula" maxlength="30"
-                               placeholder="Matricula" required
+                               placeholder="Matrícula" required
                                ng-class="{'hasError' : funcionarioForm.matricula.$invalid && submitted}"
                                ng-model="funcionario.matricula"/>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="cargo">CARGO: </label>
+                        <label class="control-label" for="cargo">Cargo: </label>
                         <select class="form-control inputForm" name="cargo" id="cargo" required
                                 ng-class="{'hasError' : funcionarioForm.cargo.$invalid && submitted}"
                                 ng-model="funcionario.cargo">
                             <option value="" disabled>Selecione</option>
-                            <option value="SIN">Sindico</option>
+                            <option value="SIN">Síndico</option>
                             <option value="ADM">Administrador</option>
                             <option value="AUX">Auxiliar Administrativo</option>
                             <option value="POR">Porteiro</option>
@@ -39,7 +39,7 @@
                                placeholder="Registro Geral" required
                                ng-class="{'hasError' : funcionarioForm.rg.$invalid && submitted}"
                                ng-model="funcionario.rg"/>
-                        <p class="obrigatorio" ng-show="fuSncionarioForm.rg.$invalid && submitted"></p>
+                        <p class="obrigatorio" ng-show="funcionarioForm.rg.$invalid && submitted"></p>
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="ufRg">UF: </label>
@@ -47,13 +47,33 @@
                                 ng-class="{'hasError' : funcionarioForm.ufRg.$invalid && submitted}"
                                 ng-model="funcionario.ufRg">
                             <option value="" disabled>Selecione</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="GO">Goiás</option>
-                            <option value="PI">Piauí</option>
-                            <option value="MA">Maranhão</option>
+                            <option value="ac">Acre</option>
+                            <option value="al">Alagoas</option>
+                            <option value="am">Amazonas</option>
+                            <option value="ap">Amapá</option>
+                            <option value="ba">Bahia</option>
+                            <option value="ce">Ceará</option>
+                            <option value="df">Distrito Federal</option>
+                            <option value="es">Espírito Santo</option>
+                            <option value="go">Goiás</option>
+                            <option value="ma">Maranhão</option>
+                            <option value="mt">Mato Grosso</option>
+                            <option value="ms">Mato Grosso do Sul</option>
+                            <option value="mg">Minas Gerais</option>
+                            <option value="pa">Pará</option>
+                            <option value="pb">Paraíba</option>
+                            <option value="pr">Paraná</option>
+                            <option value="pe">Pernambuco</option>
+                            <option value="pi">Piauí</option>
+                            <option value="rj">Rio de Janeiro</option>
+                            <option value="rn">Rio Grande do Norte</option>
+                            <option value="ro">Rondônia</option>
+                            <option value="rs">Rio Grande do Sul</option>
+                            <option value="rr">Roraima</option>
+                            <option value="sc">Santa Catarina</option>
+                            <option value="se">Sergipe</option>
+                            <option value="sp">São Paulo</option>
+                            <option value="to">Tocantins</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -65,7 +85,7 @@
                         <p class="obrigatorio" ng-show="funcionarioForm.cpf.$invalid && submitted"></p>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="telefoneFixo">TELEFONE: </label>
+                        <label class="control-label" for="telefoneFixo">Telefone: </label>
                         <input class="form-control inputForm" type="tel" name="telefoneFixo" id="telefoneFixo"
                                maxlength="10"
                                placeholder="Telefone" required
@@ -74,7 +94,7 @@
                         <p class="obrigatorio" ng-show="funcionarioForm.telefoneFixo.$invalid && submitted"></p>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="telefoneMovel">CELULAR: </label>
+                        <label class="control-label" for="telefoneMovel">Celular: </label>
                         <input class="form-control inputForm" type="tel" name="telefoneMovel" id="telefoneMovel"
                                maxlength="10"
                                placeholder="Ceular" required
@@ -83,7 +103,7 @@
                         <p class="obrigatorio" ng-show="funcionarioForm.telefoneMovel.$invalid && submitted"></p>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="email">EMAIL: </label>
+                        <label class="control-label" for="email">Email: </label>
                         <input class="form-control inputForm" type="email" name="email" id="email" maxlength="30"
                                placeholder="Email" required
                                ng-class="{'hasError' : funcionarioForm.email.$invalid && submitted}"
@@ -91,12 +111,12 @@
                         <p class="obrigatorio" ng-show="funcionarioForm.email.$invalid && submitted"></p>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="endereco">ENDEREÇO: </label>
+                        <label class="control-label" for="endereco">Endereço: </label>
                         <input class="form-control inputForm" type="text" name="endereco" id="endereco" maxlength="20"
                                placeholder="Endereço" ng-model="funcionario.endereco"/>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="bairro">BAIRRO: </label>
+                        <label class="control-label" for="bairro">Bairro: </label>
                         <input class="form-control inputForm" type="text" name="bairro" id="bairro" maxlength="20"
                                placeholder="Bairro" ng-model="funcionario.bairro"/>
                     </div>
@@ -106,7 +126,7 @@
                                placeholder="CEP" ng-model="funcionario.cep"/>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="cidade">CIDADE: </label>
+                        <label class="control-label" for="cidade">Cidade: </label>
                         <select class="form-control inputForm" name="cidade" id="cidade" ng-model="funcionario.cidade">
                             <option value="" disabled>Selecione</option>
                             <option value="RF1">Riacho Fundo 1</option>
@@ -115,7 +135,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="control-label" for="estado">ESTADO: </label>
+                        <label class="control-label" for="estado">Estado: </label>
                         <select class="form-control inputForm" name="estado" id="estado" ng-model="funcionario.estado">
                             <option value="" disabled>Selecione</option>
                             <option value="ac">Acre</option>
@@ -165,21 +185,15 @@
                 <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Matricula</th>
+                        <th>Matrícula</th>
                         <th>Cargo</th>
                         <th>Nome</th>
                         <th>RG</th>
                         <th>UF</th>
                         <th>CPF</th>
-                        <th>Telefone</th>
                         <th>Celular</th>
                         <th>Email</th>
-                        <th>Endereço</th>
-                        <th>Bairro</th>
-                        <th>CEP</th>
-                        <th>Cidade</th>
-                        <th>Estado</th>
-                        <th>Editar / Apagar</th>
+                        <th>Visualizar/Editar/Apagar</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -188,19 +202,16 @@
                         <td>{{funcionario.cargo}}</td>
                         <td>{{funcionario.nome}}</td>
                         <td>{{funcionario.rg}}</td>
-                        <td>{{funcionario.uf}}</td>
+                        <td>{{funcionario.ufRg}}</td>
                         <td>{{funcionario.cpf}}</td>
-                        <td>{{funcionario.telefoneFixo}}</td>
                         <td>{{funcionario.telefoneMovel}}</td>
                         <td>{{funcionario.email}}</td>
-                        <td>{{funcionario.Endereco}}</td>
-                        <td>{{funcionario.Bairro}}</td>
-                        <td>{{funcionario.CEP}}</td>
-                        <td>{{funcionario.Cidade}}</td>
-                        <td>{{funcionario.Estado}}</td>
                         <td>
                             <form class="form-inline">
                                 <div class="form-group">
+                                    <button type="button" class="btn btn-success">
+                                        <i class="button_list material-icons">find_in_page</i>
+                                    </button>
                                     <button type="button" class="btn btn-warning">
                                         <i class="button_list material-icons">mode_edit</i>
                                     </button>

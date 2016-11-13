@@ -23,8 +23,8 @@ body {
 .material-icons {
     text-align: center;
 }
-
 #menu {
+    background: #20383e;
     color: #fff;
     text-decoration: none;
 }
@@ -49,8 +49,11 @@ body {
     text-align: center;
 }
 
-#test {
-    margin-top: 1px;
+#logotipo{
+    width: 7%;
+}
+#subMenu{
+    width: 101%;
 }
 
 .menuIcon {
@@ -76,12 +79,13 @@ body {
     font-size: 16px;
 }
 
-#footer{
+#footer {
     background: #20383e;
     font-size: 18px;
     color: #fff;
     height: 45px;
 }
+
 /* -----> Home <----- */
 
 /* Configuração de Layout FlexBox (Colunas,Linhas,Filhas) */
@@ -115,6 +119,18 @@ body {
     width: 98%;
     border: 1px solid black;
     border-radius: 10px;
+}
+
+.inputFormHome {
+    width: 81%;
+}
+
+.inputFormHomeInline {
+    width: 32%;
+}
+
+textarea{
+    background: red;
 }
 
 /* Page - Section */
