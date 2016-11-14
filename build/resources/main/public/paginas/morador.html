@@ -1,4 +1,4 @@
-<main class="main" ng-controller="unidadeController">
+<main class="main" ng-controller="moradorController">
     <div class="container layout_form">
         <h1 class="titulo">Cadastrar Morador</h1>
         <article class="row formularios">
@@ -97,8 +97,7 @@
                                 id="bloco"
                                 required
                                 ng-class="{'hasError' : moradorForm.bloco.$invalid && submitted}"
-                                ng-model="morador.bloco">
-                            ng-model="morador.unidade">
+                                  ng-model="morador.unidade">
                             <option value="" disabled>Selecione</option>
                         </select>
                     </div>
@@ -106,10 +105,8 @@
                         <label class="control-label" for="numeroCasa">Número da Casa: </label>
                         <select class="form-control inputForm"
                                 ng-options="unidade.numeroCasa for unidade in unidades"
-                                id="numeroCasa" required
-                                ng-class="{'hasError' : moradorForm.numeroCasa.$invalid && submitted}"
-                                ng-model="morador.numeroCasa">
-                            ng-model="morador.unidade">
+                                  ng-class="{'hasError' : moradorForm.numeroCasa.$invalid && submitted}"
+                                  ng-model="morador.unidade">
                             <option value="" disabled>Selecione</option>
                         </select>
                     </div>
@@ -146,7 +143,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="unidade in unidades">
+                    <tr ng-repeat="morador in moradores">
                         <td>{{morador.nome}}</td>
                         <td>{{morador.rg}}</td>
                         <td>{{morador.ufRg}}</td>
@@ -154,8 +151,8 @@
                         <td>{{morador.telefoneFixo}}</td>
                         <td>{{morador.telefoneMovel}}</td>
                         <td>{{morador.email}}</td>
-                        <td>{{unidade.bloco}}</td>
-                        <td>{{unidade.numeroCasa}}</td>
+                        <td>{{morador.unidade.bloco}}</td>
+                        <td>{{morador.unidade.numeroCasa}}</td>
                         <td>
                             <form class="form-inline">
                                 <div class="form-group">
