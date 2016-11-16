@@ -1,6 +1,7 @@
 package sindcon.model.persistencia.entidade;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -10,9 +11,13 @@ public class Unidade {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_unidade")
     private Integer idUnidade;
-    private char bloco;
+
     @Column(name = "numero_casa")
     private Integer numeroCasa;
+
+    @ManyToOne
+    @JoinColumn(name = "letra_bloco")
+    private Bloco bloco;
 
     //Relacionamentos:
     @OneToMany(mappedBy = "unidade")
@@ -23,18 +28,23 @@ public class Unidade {
     public Integer getIdUnidade() {
         return idUnidade;
     }
+
     public void setIdUnidade(Integer idUnidade) {
         this.idUnidade = idUnidade;
     }
-    public char getBloco() {
+
+    public Bloco getBloco() {
         return bloco;
     }
-    public void setBloco(char bloco) {
+
+    public void setBloco(Bloco bloco) {
         this.bloco = bloco;
     }
+
     public Integer getNumeroCasa() {
         return numeroCasa;
     }
+
     public void setNumeroCasa(Integer numeroCasa) {
         this.numeroCasa = numeroCasa;
     }
