@@ -16,7 +16,7 @@ public class Unidade {
     private Integer numeroCasa;
 
     @ManyToOne
-    @JoinColumn(name = "letra_bloco")
+    @JoinColumn(name = "id_bloco")
     private Bloco bloco;
 
     //Relacionamentos:

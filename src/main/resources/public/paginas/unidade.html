@@ -2,15 +2,26 @@
     <div class="container layout_form">
         <h1 class="titulo">Cadastrar Unidade</h1>
         <article class="row formularios">
-            <div class="col-md-12">
+          <div class="form-group">
+            <a class="navbar-form" ui-sref="bloco">
+                <i class="material-icons">group</i>
+                <div>Criar novo bloco</div>
+              </a>
+          </div>
+
                 <form class="form-group">
+
+
                     <div class="form-group">
-                        <label class="control-label" for="bloco">Unidade: </label>
-                        <input class="form-control inputForm" type="text" name="bloco" id="bloco" size="10"
-                               maxlength="1" placeholder="Bloco"
-                               ng-model="unidade.bloco"/>
+                        <label class="control-label" for="bloco">Bloco: </label>
+                        <select class="form-control inputForm" ng-options="bloco.letraBloco for bloco in blocos"
+                                id="bloco"
+                                ng-class="{'hasError' : moradorForm.bloco.$invalid && submitted}"
+                                  ng-model="unidade.bloco">
+                            <option value="" disabled>Selecione</option>
+                        </select>
                     </div>
-                    <div class="form-group">
+                    <div>
                         <label class="control-label" for="numeroCasa">Número da Casa: </label>
                         <input class="form-control inputForm" type="number" name="numero_casa" id="numeroCasa"
                                size="4"
@@ -20,6 +31,8 @@
                     <button class="btn btn-primary" type="submit" ng-click="addUnidade()">Salvar</button>
                     <input class="btn btn-primary" type="button" name="botao-unidade" value="Cancelar">
                 </form>
+                <p class="obrigatorio" ng-show="moradorForm.nome.$invalid && submitted">* Os campos grifados são de
+                    preenchimento obrigatório!</p>
             </div>
         </article>
     </div>
@@ -41,7 +54,7 @@
                     </thead>
                     <tbody>
                     <tr ng-repeat="unidade in unidades">
-                        <td>{{unidade.bloco}}</td>
+                        <td>{{unidade.bloco.letraBloco}}</td>
                         <td>{{unidade.numeroCasa}}</td>
                         <td>
                             <form class="form-inline">
@@ -60,5 +73,5 @@
                 </table>
             </div>
         </article>
-    </div>
+
 </main>

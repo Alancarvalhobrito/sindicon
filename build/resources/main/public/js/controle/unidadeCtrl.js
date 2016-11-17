@@ -1,7 +1,8 @@
 angular.module('unidadeCtrl', [])
-    .controller('unidadeController', ['$scope', '$state', 'unidadeService', 'moradorService',function ($scope, $state, unidadeService,moradorService) {
+    .controller('unidadeController', ['$scope', '$state', 'unidadeService', 'moradorService', 'blocoService',function ($scope, $state, unidadeService,moradorService,blocoService) {
         $scope.unidades = unidadeService.getUnidade();
         $scope.moradores = moradorService.getMorador();
+            $scope.blocos = blocoService.getBloco();
         $scope.addUnidade = function () {
             $scope.submitted = true;
             console.log($scope.unidade);

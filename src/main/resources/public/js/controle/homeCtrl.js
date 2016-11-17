@@ -1,5 +1,5 @@
 angular.module('homeCtrl', [])
-    .controller('homeController', ['$scope', '$state', 'visitanteService', 'unidadeService', 'veiculoService', 'moradorService', 'usuarioService', 'acessoService', function ($scope, $state, visitanteService, unidadeService, veiculoService, moradorService, usuarioService, acessoService) {
+    .controller('homeController', ['$scope', '$state', 'visitanteService', 'unidadeService', 'veiculoService', 'moradorService', 'usuarioService', 'acessoService','blocoService', function ($scope, $state, visitanteService, unidadeService, veiculoService, moradorService, usuarioService, acessoService, blocoService) {
         $scope.visitantes = visitanteService.getVisitante();
         $scope.unidades = unidadeService.getUnidade();
         $scope.veiculos = veiculoService.getVeiculo();

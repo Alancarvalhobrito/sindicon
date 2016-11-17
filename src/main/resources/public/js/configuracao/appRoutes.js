@@ -49,5 +49,13 @@ angular.module('appRouters', [])
                 },
                 templateUrl: 'paginas/unidade.html',
                 controller: 'unidadeController'
+            })
+            .state('bloco', {
+                url: '/bloco',
+                params: {
+                    param1: null
+                },
+                templateUrl: 'paginas/bloco.html',
+                controller: 'blocoController'
             });
     }]);

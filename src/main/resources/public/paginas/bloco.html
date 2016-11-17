@@ -1,0 +1,23 @@
+<main class="main" ng-controller="blocoController">
+  <div class="container layout_form">
+    <h1 class="titulo">Cadastrar Unidade</h1>
+    <article class="row formularios">
+
+      <form>
+
+        <label class="control-label" for="numeroCasa">Letra do bloco: </label>
+        <input class="form-control inputForm" type="text"
+        maxlength="1"
+        placeholder="Letra do Bloco" ng-model="bloco.letraBloco"/>
+
+
+        <button class="btn btn-primary" type="submit" ng-click="addBloco()">Salvar</button>
+        <div class="form-group">
+          <a class="navbar-form" ui-sref="unidade">
+              <i class="material-icons">group</i>
+              <div>Voltar</div>
+        </div>
+      </form>
+
+    </div>
+  </main>

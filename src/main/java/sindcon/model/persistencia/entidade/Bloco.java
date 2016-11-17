@@ -17,7 +17,7 @@ public class Bloco {
     @OneToMany(mappedBy = "bloco")
     @JsonIgnore
     private Collection<Unidade> unidades;
-    @Column(name = "letra_bloco")
+    @Column(name = "letra_bloco", unique = true)
     private String letraBloco;
 
     public Collection<Unidade> getUnidades() {
