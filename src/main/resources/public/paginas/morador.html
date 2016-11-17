@@ -93,15 +93,14 @@
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="bloco">Bloco: </label>
-                        <select class="form-control inputForm" ng-options="unidade.bloco for unidade in unidades"
+                        <select class="form-control inputForm" ng-options="bloco.letraBloco for bloco in blocos"
                                 id="bloco"
                                 required
                                 ng-class="{'hasError' : moradorForm.bloco.$invalid && submitted}"
-                                  ng-model="morador.unidade">
+                                  ng-model="unidade.bloco">
                             <option value="" disabled>Selecione</option>
                         </select>
-                    </div>
-                    <div class="form-group">
+
                         <label class="control-label" for="numeroCasa">Número da Casa: </label>
                         <select class="form-control inputForm"
                                 ng-options="unidade.numeroCasa for unidade in unidades"
@@ -151,7 +150,7 @@
                         <td>{{morador.telefoneFixo}}</td>
                         <td>{{morador.telefoneMovel}}</td>
                         <td>{{morador.email}}</td>
-                        <td>{{morador.unidade.bloco}}</td>
+                        <td>{{morador.unidade.bloco.letraBloco}}</td>
                         <td>{{morador.unidade.numeroCasa}}</td>
                         <td>
                             <form class="form-inline">

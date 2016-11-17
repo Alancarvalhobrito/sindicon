@@ -1,8 +1,10 @@
 angular.module('unidadeCtrl', [])
-    .controller('unidadeController', ['$scope', '$state', 'unidadeService', 'moradorService', 'blocoService',function ($scope, $state, unidadeService,moradorService,blocoService) {
+    .controller('unidadeController', ['$scope', '$state', '$watch','unidadeService', 'moradorService', 'blocoService',function ($scope, $state, unidadeService,moradorService,blocoService, $watch) {
         $scope.unidades = unidadeService.getUnidade();
         $scope.moradores = moradorService.getMorador();
             $scope.blocos = blocoService.getBloco();
+
+
         $scope.addUnidade = function () {
             $scope.submitted = true;
             console.log($scope.unidade);
@@ -10,6 +12,7 @@ angular.module('unidadeCtrl', [])
             unidadeService.createUnidade($scope.unidade, function () {
                 console.log(unidadeService.getUnidade());
             });
+  
             $scope.unidade = {};
             $scope.submitted = false;
         };
