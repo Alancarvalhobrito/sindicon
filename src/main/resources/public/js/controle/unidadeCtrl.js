@@ -1,5 +1,5 @@
-angular.module('unidadeCtrl', [])
-    .controller('unidadeController', ['$scope', '$state', '$watch','unidadeService', 'moradorService', 'blocoService',function ($scope, $state, unidadeService,moradorService,blocoService, $watch) {
+var app = angular.module('unidadeCtrl', [])
+    app.controller('unidadeController', ['$scope', '$state', 'unidadeService', 'moradorService', 'blocoService',function ($scope, $state, unidadeService,moradorService,blocoService) {
         $scope.unidades = unidadeService.getUnidade();
         $scope.moradores = moradorService.getMorador();
             $scope.blocos = blocoService.getBloco();
@@ -12,7 +12,7 @@ angular.module('unidadeCtrl', [])
             unidadeService.createUnidade($scope.unidade, function () {
                 console.log(unidadeService.getUnidade());
             });
-  
+
             $scope.unidade = {};
             $scope.submitted = false;
         };
@@ -43,3 +43,17 @@ angular.module('unidadeCtrl', [])
             $scope.isEdit = false;
         }
     }]);
+    app.filter('secondDropdown', function () {
+        return function (secondSelect, firstSelect) {
+            var filtered = [];
+            if (firstSelect === null) {
+                return filtered;
+            }
+            angular.forEach(secondSelect, function (s2) {
+                    if (s2.bloco.idBloco == firstSelect) {
+                    filtered.push(s2);
+                }
+            });
+            return filtered;
+        };
+    });
