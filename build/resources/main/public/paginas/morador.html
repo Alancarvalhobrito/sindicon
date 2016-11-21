@@ -97,8 +97,7 @@
                         <select class="form-control inputForm"  data-ng-model="firstSelect" data-ng-options="bloco.idBloco as bloco.letraBloco for bloco in blocos"
                                 id="bloco"
                                 required
-                                ng-class="{'hasError' : moradorForm.bloco.$invalid && submitted}"
-                            >
+                                ng-class="{'hasError' : moradorForm.bloco.$invalid && submitted}">
                             <option value="" disabled>Selecione</option>
                         </select>
 

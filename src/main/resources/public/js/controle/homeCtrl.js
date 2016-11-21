@@ -6,4 +6,7 @@ angular.module('homeCtrl', [])
         $scope.moradores = moradorService.getMorador();
         $scope.usuarios = usuarioService.getUsuario();
         $scope.acessos = acessoService.getAcesso();
+        $scope.unidades = unidadeService.getUnidade();
+        $scope.moradores = moradorService.getMorador();
+            $scope.blocos = blocoService.getBloco();
     }]);
