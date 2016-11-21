@@ -104,7 +104,8 @@
                         <label class="control-label" for="numeroCasa">Número da Casa: </label>
                         <select class="form-control inputForm"
                                 data-ng-model="secondSelect" data-ng-options=" unidade.numeroCasa for unidade in unidades | secondDropdown: firstSelect"
-                                  ng-class="{'hasError' : moradorForm.numeroCasa.$invalid && submitted}">
+                                  ng-class="{'hasError' : moradorForm.numeroCasa.$invalid && submitted}"
+                                  ng-change="morador.unidade=secondSelect">
                             <option value="" disabled>Selecione</option>
                         </select>
                     </div>
