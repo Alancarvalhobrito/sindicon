@@ -14,10 +14,40 @@
         <button class="btn btn-primary" type="submit" ng-click="addBloco()">Salvar</button>
         <div class="form-group">
           <a class="navbar-form" ui-sref="unidade">
-              <i class="material-icons">group</i>
-              <div>Voltar</div>
-        </div>
-      </form>
+            <i class="material-icons">group</i>
+            <div>Voltar</div>
+          </div>
+              </div>
+        </form>
+        <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Bloco </th>
 
-    </div>
-  </main>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="bloco in blocos">
+                        <td>{{bloco.letraBloco}}</td>
+
+                        <td>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-success">
+                                        <i class="button_list material-icons">find_in_page</i>
+                                    </button>
+                                    <button type="button" class="btn btn-warning">
+                                        <i class="button_list material-icons">mode_edit</i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger">
+                                        <i class="button_list material-icons" ng-click="removeBloco(bloco.idBloco)">delete_forever</i>
+                                    </button>
+                                </div>
+                            </form>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+      </main>

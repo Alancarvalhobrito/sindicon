@@ -1,6 +1,6 @@
 <main class="main" ng-controller="unidadeController">
     <div class="container layout_form">
-        <h1 class="titulo">Cadastrar Unidade</h1>
+        <h1 class="titulo" ng-show="!isEdit">Cadastrar Unidade</h1>
         <article class="row formularios">
           <div class="form-group">
             <a class="navbar-form" ui-sref="bloco">
@@ -44,7 +44,7 @@
                 <input type="text" id="pesquisa" class="form-control inputSearch" placeholder="Pesquisar Unidades">
             </div>
             <div class="col-md-12">
-                <table class="table table-striped">
+                <table class="table table-striped" ng-show="!isEdit">
                     <thead>
                     <tr>
                         <th>Bloco</th>
@@ -53,17 +53,17 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="unidade in unidades">
-                        <td>{{unidade.bloco.letraBloco}}</td>
-                        <td>{{unidade.numeroCasa}}</td>
+                    <tr ng-repeat="u in unidades">
+                        <td>{{u.bloco.letraBloco}}</td>
+                        <td>{{u.numeroCasa}}</td>
                         <td>
                             <form class="form-inline">
                                 <div class="form-group">
                                     <button type="button" class="btn btn-warning">
-                                        <i class="button_list material-icons">mode_edit</i>
+                                        <i class="button_list material-icons" ng-click="getCurrentUnidade(u)">mode_edit</i>
                                     </button>
                                     <button type="button" class="btn btn-danger">
-                                        <i class="button_list material-icons">delete_forever</i>
+                                        <i class="button_list material-icons" ng-click="deleteUnidade(u.idUnidade)">delete_forever</i>
                                     </button>
                                 </div>
                             </form>
@@ -73,5 +73,25 @@
                 </table>
             </div>
         </article>
+        </main>
 
-</main>
+        <div ng-show="isEdit">
+<h1>Editar Unidade</h1>
+    <form name="form-group" novalidate ng-submit="editUnidade()">
+
+        <p>
+            <label for="bloco">Nome<label>
+                <input value="{{currentUnidade.numeroCasa}}" type="number" name="name" required
+                      ng-model="unidade.numeroCasa"/>
+        </p>
+        <p>
+            <label for="name">Escolha o bloco<label>
+            <select ng-optionss="bloco.letraBloco for bloco in blocos" ng-model="unidade.bloco">
+                <option value="" disabled>Escolha um bloco</option>
+            </select>
+        </p>
+            <button type="submit">Salvar</button>
+            <button type="button" ng-click="setEdit()">Cancelar</button>
+    </form>
+
+</div>

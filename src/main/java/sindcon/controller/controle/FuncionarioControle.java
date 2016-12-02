@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import sindcon.model.persistencia.entidade.Funcionario;
 import sindcon.model.servico.FuncionarioServico;
 
@@ -45,8 +42,8 @@ public class FuncionarioControle {
 
     //DELETE(Accesses)
     @RequestMapping(method = RequestMethod.DELETE)
-    public ResponseEntity<?> delete(@RequestBody Funcionario funcionario) {
-        funcionarioServico.apagarFuncionario(funcionario);
+    public ResponseEntity<?> delete(@RequestParam Integer id) {
+        funcionarioServico.apagarFuncionario(id);
         HttpHeaders httpHeaders = new HttpHeaders();
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.OK);
     }

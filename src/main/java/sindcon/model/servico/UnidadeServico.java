@@ -29,7 +29,7 @@ public class UnidadeServico {
     }
 
     //DELETE
-    public void apagarUnidade(Unidade unidade) {
-        unidadeRepositorio.delete(unidade);
+    public void apagarUnidade(Integer idUnidade) {
+        unidadeRepositorio.delete(idUnidade);
     }
 }

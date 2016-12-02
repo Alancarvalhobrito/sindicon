@@ -29,7 +29,7 @@ public class VeiculoServico {
     }
 
     //DELETE
-    public void apagarVeiculo(Veiculo veiculo) {
-        veiculoRepositorio.delete(veiculo);
+    public void apagarVeiculo(Integer idVeiculo) {
+        veiculoRepositorio.delete(idVeiculo);
     }
 }

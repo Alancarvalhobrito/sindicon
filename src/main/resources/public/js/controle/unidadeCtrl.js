@@ -37,10 +37,11 @@ var app = angular.module('unidadeCtrl', [])
             });
 
             $scope.setEdit();
+
             $scope.unidade = {};
         }
         $scope.setEdit = function () {
-            $scope.isEdit = false;
+            $scope.isEdit = true;
         }
     }]);
     app.filter('secondDropdown', function () {

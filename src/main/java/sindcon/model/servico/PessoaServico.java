@@ -29,7 +29,7 @@ public class PessoaServico {
     }
 
     //DELETE
-    public void apagarPessoa(Pessoa pessoa) {
-        pessoaRepositorio.delete(pessoa);
+    public void apagarPessoa(Integer idPessoa) {
+        pessoaRepositorio.delete(idPessoa);
     }
 }

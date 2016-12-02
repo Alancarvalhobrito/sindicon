@@ -11,7 +11,7 @@ public class Pessoa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_pessoa")
-    private Long idPessoa;
+    private Integer idPessoa;
     private String nome;
     private Integer rg;
     private String ufRg;
@@ -43,11 +43,11 @@ public class Pessoa {
     //QRCODE(ZXING):
 
     //Gets e Sets:
-    public Long getIdPessoa() {
+    public Integer getIdPessoa() {
         return idPessoa;
     }
 
-    public void setIdPessoa(Long idPessoa) {
+    public void setIdPessoa(Integer idPessoa) {
         this.idPessoa = idPessoa;
     }
 

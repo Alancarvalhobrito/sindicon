@@ -29,7 +29,7 @@ public class BlocoServico {
     }
 
     //DELETE
-    public void apagarBloco(Bloco bloco) {
-        blocoRepositorio.delete(bloco);
+    public void apagarBloco(Integer idBloco) {
+        blocoRepositorio.delete(idBloco);
     }
 }

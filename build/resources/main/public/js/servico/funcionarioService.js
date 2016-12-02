@@ -47,9 +47,7 @@ angular.module('funcionarioService', ['ngResource'])
             funcionarioProxy.update(funcionario, successCallback, error);
         };
 
-        self.removeFuncionario = function (funcionarioId) {
-            funcionarioProxy.delete({
-                id: funcionarioId
-            });
-        }
+        self.removeFuncionario = function(idFuncionario, successCallback, error) {
+                funcionarioProxy.delete({id: idFuncionario}, successCallback, error);
+            }
     }]);

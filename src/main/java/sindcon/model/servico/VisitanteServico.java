@@ -30,7 +30,7 @@ public class VisitanteServico {
     }
 
     //DELETE
-    public void apagarVisitante(Visitante visitante) {
-        visitanteRepositorio.delete(visitante);
+    public void apagarVisitante(Integer idVisitante) {
+        visitanteRepositorio.delete(idVisitante);
     }
 }

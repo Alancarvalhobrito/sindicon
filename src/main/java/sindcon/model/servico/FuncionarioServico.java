@@ -30,7 +30,7 @@ public class FuncionarioServico {
     }
 
     //DELETE
-    public void apagarFuncionario(Funcionario funcionario) {
-        funcionarioRepositorio.delete(funcionario);
+    public void apagarFuncionario(Integer idFuncionario) {
+        funcionarioRepositorio.delete(idFuncionario);
     }
 }

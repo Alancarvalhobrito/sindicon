@@ -27,7 +27,7 @@ public class EnderecoServico {
     }
 
     //DELETE
-    public void apagarEndereco(Endereco endereco) {
-        enderecoRepositorio.delete(endereco);
+    public void apagarEndereco(Integer idEndereco) {
+        enderecoRepositorio.delete(idEndereco);
     }
 }

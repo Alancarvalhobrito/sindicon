@@ -4,10 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import sindcon.model.persistencia.entidade.Endereco;
 import sindcon.model.servico.EnderecoServico;
 
@@ -45,8 +42,8 @@ public class EnderecoControle {
 
     //DELETE(Accesses)
     @RequestMapping(method = RequestMethod.DELETE)
-    public ResponseEntity<?> delete(@RequestBody Endereco endereco) {
-        enderecoServico.apagarEndereco(endereco);
+    public ResponseEntity<?> delete(@RequestParam Integer id) {
+        enderecoServico.apagarEndereco(id);
         HttpHeaders httpHeaders = new HttpHeaders();
         return new ResponseEntity<>(null, httpHeaders, HttpStatus.OK);
     }

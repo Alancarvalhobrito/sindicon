@@ -29,7 +29,7 @@ public class UsuarioServico {
     }
 
     //DELETE
-    public void apagarUsuario(Usuario usuario) {
-        usuarioRepositorio.delete(usuario);
+    public void apagarUsuario(Integer idUsuario) {
+        usuarioRepositorio.delete(idUsuario);
     }
 }

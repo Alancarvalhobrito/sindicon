@@ -30,7 +30,7 @@ public class MoradorServico {
     }
 
     //DELETE
-    public void apagarMorador(Morador morador) {
-        moradorRepositorio.delete(morador);
+    public void apagarMorador(Integer idPessoa) {
+        moradorRepositorio.delete(idPessoa);
     }
 }

@@ -29,7 +29,7 @@ public class AcessoServico {
     }
 
     //DELETE
-    public void apagarAcesso(Acesso acesso) {
-        acessoRepositorio.delete(acesso);
+    public void apagarAcesso(Integer idAcesso) {
+        acessoRepositorio.delete(idAcesso);
     }
 }

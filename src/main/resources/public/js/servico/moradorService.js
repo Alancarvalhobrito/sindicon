@@ -47,9 +47,9 @@ angular.module('moradorService', ['ngResource'])
             moradorProxy.update(morador, successCallback, error);
         };
 
-        self.removeMorador = function (moradorId) {
-            moradorProxy.delete({
-                id: moradorId
-            });
-        }
+        self.removeMorador = function(idPessoa, successCallback, error) {
+                moradorProxy.delete({id: idPessoa}, successCallback, error);
+            }
+
+
     }]);

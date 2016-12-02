@@ -47,9 +47,8 @@ angular.module('unidadeService', ['ngResource'])
             unidadeProxy.update(unidade, successCallback, error);
         };
 
-        self.removeUnidade = function (unidadeId) {
-            unidadeProxy.delete({
-                id: unidadeId
-            });
+
+        self.removeUnidade = function(idUnidade, successCallback, error) {
+            unidadeProxy.delete({id: idUnidade}, successCallback, error);
         }
     }]);

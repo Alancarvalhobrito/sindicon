@@ -47,9 +47,7 @@ angular.module('pessoaService', ['ngResource'])
             pessoaProxy.update(pessoa, successCallback, error);
         };
 
-        self.removePessoa = function (pessoaId) {
-            pessoaProxy.delete({
-                id: pessoaId
-            });
-        }
+        self.removePessoa = function(idPessoa, successCallback, error) {
+                  pessoaProxy.delete({id: idPessoa}, successCallback, error);
+              }
     }]);
