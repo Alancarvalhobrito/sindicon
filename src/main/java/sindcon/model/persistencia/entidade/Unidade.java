@@ -5,6 +5,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
 import java.util.Collection;
 
+@Table(
+        uniqueConstraints =
+        @UniqueConstraint(columnNames = {"id_bloco", "numero_casa"})
+)
 @Entity
 public class Unidade {
     @Id
