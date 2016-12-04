@@ -4,6 +4,10 @@ angular.module('funcionarioCtrl', [])
 
         $scope.addFuncionario = function () {
             $scope.submitted = true;
+            if ($scope.funcionarioForm.$invalid) {
+                $scope.message = false;
+                return;
+            }
             console.log($scope.funcionario);
 
             funcionarioService.createFuncionario($scope.funcionario, function () {
@@ -21,15 +25,14 @@ angular.module('funcionarioCtrl', [])
             funcionarioService.removeFuncionario(funcionario, function (data) {
                 $scope.funcionarios = funcionarioService.getFuncionario();
             });
-
             $scope.funcionarios = funcionarioService.getFuncionario();
-        }
+        };
 
         $scope.getCurrentFuncionario = function (dataFuncionario) {
             $scope.isEdit = true;
             var data = dataFuncionario;
             $scope.funcionario = data;
-        }
+        };
 
         $scope.editFuncionario = function () {
             funcionarioService.updateFuncionario($scope.funcionario, function (data) {
@@ -38,8 +41,8 @@ angular.module('funcionarioCtrl', [])
 
             $scope.setEdit();
             $scope.funcionario = {};
-        }
+        };
         $scope.setEdit = function () {
             $scope.isEdit = false;
-        }
+        };
     }]);

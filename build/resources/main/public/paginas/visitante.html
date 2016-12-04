@@ -6,6 +6,7 @@
             <div class="col-md-9">
                 <form class="form-group" name="visitanteForm" novalidate>
                     <p class="message" ng-show="visitanteForm.$invalid && submitted"></p>
+
                     <div class="form-group">
                         <label class="control-label" for="nome">Nome: </label>
                         <input class="form-control inputForm" type="text" name="nome" id="nome" maxlength="30"
@@ -14,14 +15,21 @@
                                ng-model="visitante.nome"/>
                         <p class="obrigatorio" ng-show="visitanteForm.nome.$invalid && submitted"></p>
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="rg">RG: </label>
                         <input class="form-control inputForm" type="text" name="rg" id="rg" maxlength="30"
-                               placeholder="Registro Geral" ng-model="visitante.rg"/>
+                               placeholder="Registro Geral" required
+                               ng-class="{'hasError' : visitanteForm.rg.$invalid && submitted}"
+                               ng-model="visitante.rg"/>
+                        <p class="obrigatorio" ng-show="visitanteForm.rg.$invalid && submitted"></p>
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="ufRg">UF: </label>
-                        <select class="form-control inputForm" name="ufRg" id="ufRg" ng-model="visitante.ufRg">
+                        <select class="form-control inputForm" name="ufRg" id="ufRg" required
+                                ng-class="{'hasError' : visitanteForm.ufRg.$invalid && submitted}"
+                                ng-model="visitante.ufRg">
                             <option value="" disabled>Selecione</option>
                             <option value="AC">AC</option>
                             <option value="AL">AL</option>
@@ -52,30 +60,35 @@
                             <option value="TO">TO</option>
                         </select>
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="cpf">CPF: </label>
                         <input class="form-control inputForm" type="text" name="cpf" id="cpf" maxlength="11"
-                               placeholder="CPF" ng-model="visitante.cpf"/>
+                               placeholder="CPF" required
+                               ng-class="{'hasError' : visitanteForm.cpf.$invalid && submitted}"
+                               ng-model="visitante.cpf"/>
+                        <p class="obrigatorio" ng-show="visitanteForm.cpf.$invalid && submitted"></p>
                     </div>
 
                     <div class="form-group">
                         <label class="control-label" for="bloco">Bloco: </label>
-                        <select class="form-control inputForm" ng-options="unidade.bloco for unidade in unidades"
-                                id="bloco" required ng-class="{'hasError' : visitanteForm.bloco.$invalid && submitted}"
-                                ng-model="visitante.bloco">
+                        <select class="form-control inputForm" data-ng-model="firstSelect"
+                                data-ng-options="bloco.idBloco as bloco.letraBloco for bloco in blocos" id="bloco"
+                                required ng-class="{'hasError' : visitanteForm.bloco.$invalid && submitted}">
                             <option value="" disabled>Selecione</option>
                         </select>
+                        <p class="obrigatorio" ng-show="visitanteForm.bloco.$invalid && submitted"></p>
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label" for="numeroCasa">Número da Casa: </label>
-                        <select class="form-control inputForm"
-                                ng-options="unidade.numeroCasa for unidade in unidades"
-                                id="numeroCasa" required
-                                ng-class="{'hasError' : visitanteForm.numeroCasa.$invalid && submitted}"
-                                ng-model="visitante.numeroCasa">
+                        <label class="control-label" for="numeroCasa">Casa: </label>
+                        <select class="form-control inputForm" data-ng-model="secondSelect"
+                                data-ng-options=" unidade.numeroCasa for unidade in unidades | secondDropdown: firstSelect"
+                                id="numeroCasa" required ng-change="visitante.unidade=secondSelect"
+                                ng-class="{'hasError' : visitanteForm.numeroCasa.$invalid && submitted}">
                             <option value="" disabled>Selecione</option>
                         </select>
+                        <p class="obrigatorio" ng-show="moradorForm.numeroCasa.$invalid && submitted"></p>
                     </div>
                     <div class="form-group">
                         <label class="control-label" for="observacao">Observação: </label>
@@ -84,8 +97,10 @@
                                   placeholder="Deixe aqui sua Observação" ng-model="visitante.observacao"></textarea>
                     </div>
                     <button class="btn btn-primary" type="submit" ng-click="addVisitante()">Salvar</button>
-                    <button class="btn btn-primary" type="reset" name="botao-visitante">Cancelar</button>
+                    <button class="btn btn-primary" type="submit" ui-sref="home">Cancelar</button>
                 </form>
+                <p class="obrigatorio" ng-show="visitanteForm.$invalid && submitted">* Os campos grifados são de
+                    preenchimento obrigatório!</p>
             </div>
         </article>
     </div>
@@ -105,9 +120,8 @@
                         <th>RG</th>
                         <th>UF</th>
                         <th>CPF</th>
-                        <th>Observação</th>
                         <th>Bloco</th>
-                        <th>Número da casa</th>
+                        <th>Casa</th>
                         <th>Editar / Apagar</th>
                     </tr>
                     </thead>
@@ -117,17 +131,18 @@
                         <td>{{visitante.rg}}</td>
                         <td>{{visitante.ufRg}}</td>
                         <td>{{visitante.cpf}}</td>
+                        <td>{{visitante.unidade.bloco.letraBloco}}</td>
+                        <td>{{visitante.unidade.numeroCasa}}</td>
                         <td>{{visitante.observacao}}</td>
-                        <td>{{visitante.bloco}}</td>
-                        <td>{{visitante.numeroCasa}}</td>
                         <td>
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-warning">
+                                    <button type="button" class="btn btn-warning" ng-click="getCurrentVisitante(visitante)">
                                         <i class="button_list material-icons">mode_edit</i>
                                     </button>
-                                    <button type="button" class="btn btn-danger">
-                                        <i class="button_list material-icons" ng-click="deleteVisitante(visitante.idPessoa)">delete_forever</i>
+                                    <button type="button" class="btn btn-danger"
+                                            ng-click="deleteVisitante(visitante.idPessoa)">
+                                        <i class="button_list material-icons">delete_forever</i>
                                     </button>
                                 </div>
                             </form>

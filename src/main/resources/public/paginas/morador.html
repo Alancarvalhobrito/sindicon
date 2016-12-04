@@ -6,6 +6,7 @@
             <div class="col-md-9">
                 <form class="form-group" name="moradorForm" novalidate>
                     <p class="message" ng-show="moradorForm.$invalid && submitted"></p>
+
                     <div class="form-group">
                         <label class="control-label" for="nome">Nome: </label>
                         <input class="form-control inputForm" type="text" name="nome" id="nome" maxlength="30"
@@ -14,6 +15,7 @@
                                ng-model="morador.nome"/>
                         <p class="obrigatorio" ng-show="moradorForm.nome.$invalid && submitted"></p>
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="rg">RG: </label>
                         <input class="form-control inputForm" type="text" name="rg" id="rg" maxlength="20"
@@ -22,6 +24,7 @@
                                ng-model="morador.rg"/>
                         <p class="obrigatorio" ng-show="moradorForm.rg.$invalid && submitted"></p>
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="ufRg">UF: </label>
                         <select class="form-control inputForm" name="ufRg" id="ufRg" required
@@ -57,6 +60,7 @@
                             <option value="TO">TO</option>
                         </select>
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="cpf">CPF: </label>
                         <input class="form-control inputForm" type="text" name="cpf" id="cpf" maxlength="11"
@@ -65,6 +69,7 @@
                                ng-model="morador.cpf"/>
                         <p class="obrigatorio" ng-show="moradorForm.cpf.$invalid && submitted"></p>
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="telefoneFixo">Telefone: </label>
                         <input class="form-control inputForm" type="tel" name="telefoneFixo" id="telefoneFixo"
@@ -74,6 +79,7 @@
                                ng-model="morador.telefoneFixo"/>
                         <p class="obrigatorio" ng-show="moradorForm.telefoneFixo.$invalid && submitted"></p>
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="telefoneMovel">Celular: </label>
                         <input class="form-control inputForm" type="tel" name="telefoneMovel" id="telefoneMovel"
@@ -83,6 +89,7 @@
                                ng-model="morador.telefoneMovel"/>
                         <p class="obrigatorio" ng-show="moradorForm.telefoneMovel.$invalid && submitted"></p>
                     </div>
+
                     <div class="form-group">
                         <label class="control-label" for="email">Email: </label>
                         <input class="form-control inputForm" type="email" name="email" id="email" maxlength="30"
@@ -91,28 +98,34 @@
                                ng-model="morador.email"/>
                         <p class="obrigatorio" ng-show="moradorForm.email.$invalid && submitted"></p>
                     </div>
-                    <div class="form-group">
 
-                                          <label class="control-label" for="bloco">Bloco: </label>
-                        <select class="form-control inputForm"  data-ng-model="firstSelect" data-ng-options="bloco.idBloco as bloco.letraBloco for bloco in blocos"
-                                id="bloco"
+                    <div class="form-group">
+                        <label class="control-label" for="bloco">Bloco: </label>
+                        <select class="form-control inputForm" data-ng-model="firstSelect"
+                                data-ng-options="bloco.idBloco as bloco.letraBloco for bloco in blocos" id="bloco"
                                 required
                                 ng-class="{'hasError' : moradorForm.bloco.$invalid && submitted}">
                             <option value="" disabled>Selecione</option>
                         </select>
+                        <p class="obrigatorio" ng-show="moradorForm.bloco.$invalid && submitted"></p>
+                    </div>
 
-                        <label class="control-label" for="numeroCasa">Número da Casa: </label>
-                        <select class="form-control inputForm"
-                                data-ng-model="secondSelect" data-ng-options=" unidade.numeroCasa for unidade in unidades | secondDropdown: firstSelect"
-                                  ng-class="{'hasError' : moradorForm.numeroCasa.$invalid && submitted}"
-                                  ng-change="morador.unidade=secondSelect">
+                    <div class="form-group">
+                        <label class="control-label" for="numeroCasa">Casa: </label>
+                        <select class="form-control inputForm" data-ng-model="secondSelect"
+                                data-ng-options=" unidade.numeroCasa for unidade in unidades | secondDropdown: firstSelect"
+                                id="numeroCasa" required ng-change="morador.unidade=secondSelect"
+                                ng-class="{'hasError' : moradorForm.numeroCasa.$invalid && submitted}">
                             <option value="" disabled>Selecione</option>
                         </select>
+                        <p class="obrigatorio" ng-show="moradorForm.numeroCasa.$invalid && submitted"></p>
                     </div>
+
                     <button class="btn btn-primary" type="submit" ng-click="addMorador()">Salvar</button>
-                    <button class="btn btn-primary" type="reset" name="botao-morador">Cancelar</button>
+                    <button class="btn btn-primary" type="submit" ui-sref="home">Cancelar</button>
+                    <!--<button class="btn btn-primary" type="reset" name="botao-morador">Limpar</button>-->
                 </form>
-                <p class="obrigatorio" ng-show="moradorForm.nome.$invalid && submitted">* Os campos grifados são de
+                <p class="obrigatorio" ng-show="moradorForm.$invalid && submitted">* Os campos grifados são de
                     preenchimento obrigatório!</p>
             </div>
         </article>
@@ -137,7 +150,7 @@
                         <th>Celular</th>
                         <th>Email</th>
                         <th>Bloco</th>
-                        <th>Número da Casa</th>
+                        <th>Casa</th>
                         <th>Editar / Apagar</th>
                     </tr>
                     </thead>
@@ -155,11 +168,12 @@
                         <td>
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-warning">
+                                    <button type="button" class="btn btn-warning" ng-click="getCurrentMorador(morador)">
                                         <i class="button_list material-icons">mode_edit</i>
                                     </button>
-                                    <button type="button" class="btn btn-danger">
-                                        <i class="button_list material-icons" ng-click="deleteMorador(morador.idPessoa)">delete_forever</i>
+                                    <button type="button" class="btn btn-danger"
+                                            ng-click="deleteMorador(morador.idPessoa)">
+                                        <i class="button_list material-icons">delete_forever</i>
                                     </button>
                                 </div>
                             </form>
@@ -170,103 +184,4 @@
             </div>
         </article>
     </div>
-
-    <!--<div ng-show="isEdit" class="container layout_form">
-        <h1 class="titulo">Cadastrar Morador</h1>
-        <article class="row formularios">
-            <img class="col-md-3 img-circle fotoForm" src="imagens/user/user4.jpg"/>
-            <div class="col-md-9">
-                <form class="form-group" name="moradorForm" novalidate>
-                    <p class="message" ng-show="moradorForm.$invalid && submitted"></p>
-                    <div class="form-group">
-                        <label class="control-label" for="nome">Nome: </label>
-                        <input class="form-control inputForm" type="text" name="nome" maxlength="30"
-                               placeholder="Nome Completo" required
-                               ng-class="{'hasError' : moradorForm.nome.$invalid && submitted}"
-                               ng-model="morador.nome"/>
-                        <p class="obrigatorio" ng-show="moradorForm.nome.$invalid && submitted"></p>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="rg">RG: </label>
-                        <input class="form-control inputForm" type="text" name="rg" maxlength="20"
-                               placeholder="Registro Geral" required
-                               ng-class="{'hasError' : moradorForm.rg.$invalid && submitted}"
-                               ng-model="morador.rg"/>
-                        <p class="obrigatorio" ng-show="moradorForm.rg.$invalid && submitted"></p>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="ufRg">UF: </label>
-                        <select class="form-control inputForm" name="ufRg" required
-                                ng-class="{'hasError' : moradorForm.ufRg.$invalid && submitted}"
-                                ng-model="morador.ufRg">
-                            <option value="" disabled>Selecione</option>
-                            <option value="RJ">Rio de Janeiro</option>
-                            <option value="SP">São Paulo</option>
-                            <option value="MG">Minas Gerais</option>
-                            <option value="DF">Distrito Federal</option>
-                            <option value="GO">Goiás</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="cpf">CPF: </label>
-                        <input class="form-control inputForm" type="text" name="cpf" maxlength="11"
-                               placeholder="CPF" required
-                               ng-class="{'hasError' : moradorForm.cpf.$invalid && submitted}"
-                               ng-model="morador.cpf"/>
-                        <p class="obrigatorio" ng-show="moradorForm.cpf.$invalid && submitted"></p>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="telefoneFixo">TELEFONE: </label>
-                        <input class="form-control inputForm" type="tel" name="telefoneFixo" maxlength="10"
-                               placeholder="Telefone" required
-                               ng-class="{'hasError' : moradorForm.telefoneFixo.$invalid && submitted}"
-                               ng-model="morador.telefoneFixo"/>
-                        <p class="obrigatorio" ng-show="moradorForm.telefoneFixo.$invalid && submitted"></p>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="telefoneMovel">CELULAR: </label>
-                        <input class="form-control inputForm" type="tel" name="telefoneMovel"
-                               maxlength="10"
-                               placeholder="Ceular" required
-                               ng-class="{'hasError' : moradorForm.telefoneMovel.$invalid && submitted}"
-                               ng-model="morador.telefoneMovel"/>
-                        <p class="obrigatorio" ng-show="moradorForm.telefoneMovel.$invalid && submitted"></p>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="email">EMAIL: </label>
-                        <input class="form-control inputForm" type="email" name="email" maxlength="30"
-                               placeholder="Email" required
-                               ng-class="{'hasError' : moradorForm.email.$invalid && submitted}"
-                               ng-model="morador.email"/>
-                        <p class="obrigatorio" ng-show="moradorForm.email.$invalid && submitted"></p>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="bloco">Bloco: </label>
-                        <select class="form-control inputForm" ng-options="unidade.bloco for unidade in unidades"
-                                required
-                                ng-class="{'hasError' : moradorForm.bloco.$invalid && submitted}"
-                                ng-model="morador.bloco">
-                            ng-model="morador.unidade">
-                            <option value="" disabled>Selecione</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label" for="numeroCasa">Numero da Casa: </label>
-                        <select class="form-control inputForm"
-                                ng-options="unidade.numeroCasa for unidade in unidades"
-                                required
-                                ng-class="{'hasError' : moradorForm.numeroCasa.$invalid && submitted}"
-                                ng-model="morador.numeroCasa">
-                            ng-model="morador.unidade">
-                            <option value="" disabled>Selecione</option>
-                        </select>
-                    </div>
-                    <button class="btn btn-primary" type="submit" ng-click="editMorador(morador)">Salvar</button>
-                    <button class="btn btn-primary" type="reset" name="botao-morador">Cancelar</button>
-                </form>
-                <p class="obrigatorio" ng-show="moradorForm.nome.$invalid && submitted">* Os campos grifados são de
-                    preenchimento obrigatório!</p>
-            </div>
-        </article>
-    </div>-->
 </main>   

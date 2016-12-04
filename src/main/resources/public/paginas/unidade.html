@@ -2,40 +2,46 @@
     <div class="container layout_form">
         <h1 class="titulo" ng-show="!isEdit">Cadastrar Unidade</h1>
         <article class="row formularios">
-            <div class="form-group">
-                <a class="navbar-form" ui-sref="bloco">
-                    <i class="material-icons">group</i>
-                    <div>Criar novo bloco</div>
-                </a>
+            <div class="col-md-12">
+                <form class="form-group" name="unidadeForm" novalidate>
+                    <p class="message" ng-show="unidadeForm.$invalid && submitted"></p>
+
+                    <div class="form-group">
+                        <button class="btn btn-secondary" id="novoBloco" ui-sref="bloco">
+                            <i class="material-icons">view_week</i>
+                            <h5><b>Novo Bloco</b></h5>
+                        </button>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="bloco">Bloco: </label>
+                        <select class="form-control inputForm"
+                                ng-options="bloco.letraBloco for bloco in blocos"
+                                id="bloco"
+                                ng-class="{'hasError' : unidadeForm.bloco.$invalid && submitted}"
+                                ng-model="unidade.bloco">
+                            <option value="" disabled>Selecione</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="numeroCasa">Casa: </label>
+                        <input class="form-control inputForm" type="number" name="numero_casa" id="numeroCasa"
+                               ng-class="{'hasError' : unidadeForm.bloco.$invalid && submitted}"
+                               size="4"
+                               maxlength="5"
+                               placeholder="Casa" ng-model="unidade.numeroCasa"/>
+                    </div>
+                    <button class="btn btn-primary" type="submit" ng-click="addUnidade()">Salvar</button>
+                    <button class="btn btn-primary" type="submit" ui-sref="home">Cancelar</button>
+                </form>
+                <p class="obrigatorio" ng-show="unidadeForm.$invalid && submitted">* Os campos grifados são de
+                    preenchimento
+                    obrigatório!</p>
             </div>
-
-            <form class="form-group">
-
-
-                <div class="form-group">
-                    <label class="control-label" for="bloco">Bloco: </label>
-                    <select class="form-control inputForm" ng-options="bloco.letraBloco for bloco in blocos"
-                            id="bloco"
-                            ng-class="{'hasError' : moradorForm.bloco.$invalid && submitted}"
-                            ng-model="unidade.bloco">
-                        <option value="" disabled>Selecione</option>
-                    </select>
-                </div>
-                <div>
-                    <label class="control-label" for="numeroCasa">Número da Casa: </label>
-                    <input class="form-control inputForm" type="number" name="numero_casa" id="numeroCasa"
-                           size="4"
-                           maxlength="5"
-                           placeholder="Número da Casa" ng-model="unidade.numeroCasa"/>
-                </div>
-                <button class="btn btn-primary" type="submit" ng-click="addUnidade()">Salvar</button>
-                <input class="btn btn-primary" type="button" name="botao-unidade" value="Cancelar">
-            </form>
-            <p class="obrigatorio" ng-show="moradorForm.nome.$invalid && submitted">* Os campos grifados são de
-                preenchimento obrigatório!</p>
+        </article>
     </div>
-    </article>
-    </div>
+
     <div class="list">
         <h1 class="titulo">Consultar Unidades</h1>
         <article class="row">
@@ -48,23 +54,24 @@
                     <thead>
                     <tr>
                         <th>Bloco</th>
-                        <th>Número da Casa</th>
+                        <th>Casa</th>
                         <th>Editar / Apagar</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="u in unidades">
-                        <td>{{u.bloco.letraBloco}}</td>
-                        <td>{{u.numeroCasa}}</td>
+                    <tr ng-repeat="unidade in unidades">
+                        <td>{{unidade.bloco.letraBloco}}</td>
+                        <td>{{unidade.numeroCasa}}</td>
                         <td>
                             <form class="form-inline">
                                 <div class="form-group">
                                     <button type="button" class="btn btn-warning">
                                         <i class="button_list material-icons"
-                                           ng-click="getCurrentUnidade(u)">mode_edit</i>
+                                           ng-click="getCurrentUnidade(unidade)">mode_edit</i>
                                     </button>
                                     <button type="button" class="btn btn-danger">
-                                        <i class="button_list material-icons" ng-click="deleteUnidade(u.idUnidade)">delete_forever</i>
+                                        <i class="button_list material-icons"
+                                           ng-click="deleteUnidade(unidade.idUnidade)">delete_forever</i>
                                     </button>
                                 </div>
                             </form>
@@ -77,6 +84,7 @@
     </div>
 </main>
 
+<!-- O que é isso?
 <div ng-show="isEdit">
     <h1>Editar Unidade</h1>
     <form name="form-group" novalidate ng-submit="editUnidade()">
@@ -96,3 +104,4 @@
         <button type="button" ng-click="setEdit()">Cancelar</button>
     </form>
 </div>
+-->

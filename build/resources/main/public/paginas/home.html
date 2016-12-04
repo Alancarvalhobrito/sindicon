@@ -1,4 +1,4 @@
-<main class="main">
+<main class="main" ng-controller="homeController">
     <div id="home">
         <!-- Sidebar -->
         <aside id="sidebar">
@@ -17,88 +17,126 @@
             <article class="wrapper">
                 Saída:
             </article>
-            <article id="formulario_home">
+            <article id="formulario_home" ng-controller="visitanteController">
                 <img id="fotoHome" src="imagens/user/user0.jpg">
-                <form>
+                <form class="form-group" name="visitanteForm" novalidate>
                     <h4 class="titulo">Cadastrar Visitante</h4>
+                    <p class="message" ng-show="visitanteForm.$invalid && submitted"></p>
                     <div class="row form-group">
-                        <label class="col-md-2 control-label" for="nome">Nome </label>
-                        <input class="col-md-10 inputFormHome form-control" type="text" name="nome" id="nome" size="30"
-                               maxlength="30" placeholder="Nome Completo"
+                        <label class=" col-md-2 control-label" for="nome">Nome </label>
+                        <input class="col-md-10 inputFormHome form-control" type="text" name="nome" id="nome"
+                               maxlength="30" placeholder="Nome Completo" required
+                               ng-class="{'hasError' : visitanteForm.nome.$invalid && submitted}"
                                ng-model="visitante.nome"/>
+                        <p class="obrigatorio" ng-show="visitanteForm.nome.$invalid && submitted"></p>
                     </div>
-                    <div class="row form-group">
-                        <label class="col-md-2 control-label" for="rg">RG </label>
-                        <input class="col-md-10 inputFormHome form-control" type="text" name="rg" id="rg"
-                               size="20" maxlength="30" placeholder="Registro Geral"
-                               ng-model="visitante.rg"/>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <label class="col-md-4 control-label" for="rg">RG </label>
+                                <input class="col-md-8 inputFormInline form-control" type="text" name="rg" id="rg"
+                                       maxlength="30"
+                                       placeholder="Registro Geral" required
+                                       ng-class="{'hasError' : visitanteForm.rg.$invalid && submitted}"
+                                       ng-model="visitante.rg"/>
+                                <p class="obrigatorio" ng-show="visitanteForm.rg.$invalid && submitted"></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <label class="col-md-4 control-label" for="ufRg">UF </label>
+                                <select class="col-md-8 inputFormInline form-control" name="ufRg" id="ufRg" required
+                                        ng-class="{'hasError' : visitanteForm.ufRg.$invalid && submitted}"
+                                        ng-model="visitante.ufRg">
+                                    <option value="" disabled>Selecione</option>
+                                    <option value="AC">AC</option>
+                                    <option value="AL">AL</option>
+                                    <option value="AM">AM</option>
+                                    <option value="AP">AP</option>
+                                    <option value="BA">BA</option>
+                                    <option value="CE">CE</option>
+                                    <option value="DF">DF</option>
+                                    <option value="ES">ES</option>
+                                    <option value="GO">GO</option>
+                                    <option value="MA">MA</option>
+                                    <option value="MT">MT</option>
+                                    <option value="MS">MS</option>
+                                    <option value="MG">MG</option>
+                                    <option value="PA">PA</option>
+                                    <option value="PB">PB</option>
+                                    <option value="PR">PR</option>
+                                    <option value="PE">PE</option>
+                                    <option value="PI">PI</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="RN">RN</option>
+                                    <option value="RO">RO</option>
+                                    <option value="RS">RS</option>
+                                    <option value="RR">RR</option>
+                                    <option value="SC">SC</option>
+                                    <option value="SE">SE</option>
+                                    <option value="SP">SP</option>
+                                    <option value="TO">TO</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row form-group">
-                        <label class="col-md-2 control-label" for="ufRG">UF </label>
-                        <select class="col-md-10 inputFormHome form-control" nome="ufRg" id="ufRG"
-                                ng-model="visitante.ufRg">
-                            <option value="" disabled>Selecione</option>
-                            <option value="AC">AC</option>
-                            <option value="AL">AL</option>
-                            <option value="AM">AM</option>
-                            <option value="AP">AP</option>
-                            <option value="BA">BA</option>
-                            <option value="CE">CE</option>
-                            <option value="DF">DF</option>
-                            <option value="ES">ES</option>
-                            <option value="GO">GO</option>
-                            <option value="MA">MA</option>
-                            <option value="MT">MT</option>
-                            <option value="MS">MS</option>
-                            <option value="MG">MG</option>
-                            <option value="PA">PA</option>
-                            <option value="PB">PB</option>
-                            <option value="PR">PR</option>
-                            <option value="PE">PE</option>
-                            <option value="PI">PI</option>
-                            <option value="RJ">RJ</option>
-                            <option value="RN">RN</option>
-                            <option value="RO">RO</option>
-                            <option value="RS">RS</option>
-                            <option value="RR">RR</option>
-                            <option value="SC">SC</option>
-                            <option value="SE">SE</option>
-                            <option value="SP">SP</option>
-                            <option value="TO">TO</option>
-                        </select>
-                    </div>
+
                     <div class="row form-group">
                         <label class="col-md-2 control-label" for="cpf">CPF </label>
-                        <input class="col-md-10 inputFormHome form-control" type="text" name="rg" id="cpf" size="20"
-                               maxlength="11" placeholder="CPF"
+                        <input class="col-md-10 form-control inputFormHome" type="text" name="cpf" id="cpf"
+                               maxlength="11"
+                               placeholder="CPF" required
+                               ng-class="{'hasError' : visitanteForm.cpf.$invalid && submitted}"
                                ng-model="visitante.cpf"/>
+                        <p class="obrigatorio" ng-show="visitanteForm.cpf.$invalid && submitted"></p>
                     </div>
-                    <div class="row form-group inline">
-                        <label class="col-md-2 control-label" for="bloco">Bloco </label>
-                        <select class="col-md-10 inputFormHomeInline form-control" nome="bloco"
-                                ng-options="unidade.bloco for unidade in unidades" id="bloco"
-                                ng-model="visitante.bloco">
-                            <option value="" disabled>Selecione</option>
-                        </select>
-                        <label class="col-md-2 control-label" for="numeroCasa">Casa </label>
-                        <select class="col-md-10 inputFormHomeInline form-control" nome="numeroCasa"
-                                ng-options="unidade.numeroCasa for unidade in unidades"
-                                id="numeroCasa"
-                                ng-model="visitante.numeroCasa">
-                            <option value="" disabled>Selecione</option>
-                        </select>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <label class="col-md-4 control-label" for="bloco">Bloco </label>
+                                <select class="col-md-8 inputFormInline form-control" data-ng-model="firstSelect"
+                                        data-ng-options="bloco.idBloco as bloco.letraBloco for bloco in blocos"
+                                        id="bloco"
+                                        required ng-class="{'hasError' : visitanteForm.bloco.$invalid && submitted}">
+                                    <option value="" disabled>Selecione</option>
+                                </select>
+                                <p class="obrigatorio" ng-show="visitanteForm.bloco.$invalid && submitted"></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="row form-group">
+                                <label class="col-md-4 control-label" for="numeroCasa">Casa: </label>
+                                <select class="col-md-8 inputFormInline form-control" data-ng-model="secondSelect"
+                                        data-ng-options=" unidade.numeroCasa for unidade in unidades | secondDropdown: firstSelect"
+                                        id="numeroCasa" required ng-change="visitante.unidade=secondSelect"
+                                        ng-class="{'hasError' : visitanteForm.numeroCasa.$invalid && submitted}">
+                                    <option value="" disabled>Selecione</option>
+                                </select>
+                                <p class="obrigatorio" ng-show="moradorForm.numeroCasa.$invalid && submitted"></p>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="form-group">
-                        <label class="control-label" for="observacao">Observação</label>
-                        <textarea class="form-control inputFormHomeArea" name="observacao" id="observacao" id="obs"
-                                  cols="45" rows="5"
-                                  maxlength="65"
-                                  placeholder="Deixe aqui sua Observação" ng-model="visitante.observacao"></textarea>
+                        <label class="control-label" for="observacao">Observação </label>
+                        <textarea class="form-control inputFormArea" name="observacao" id="observacao" id="obs"
+                                  cols="45"
+                                  rows="5" maxlength="65"
+                                  placeholder="Deixe aqui sua Observação"
+                                  ng-model="visitante.observacao"></textarea>
                     </div>
                     <button class="btn btn-primary" type="submit" ng-click="addVisitante()">Salvar</button>
-                    <button class="btn btn-primary" type="reset" name="botao-visitante">Cancelar</button>
+                    <button class="btn btn-primary" type="reset" name="botao-visitante">Limpar</button>
+                    <p class="obrigatorio" ng-show="visitanteForm.$invalid && submitted">* Os campos grifados são de
+                        preenchimento obrigatório!</p>
                 </form>
-            </article>
-        </section>
+
+    </div>
+    </article>
+    </section>
     </div>
 </main>

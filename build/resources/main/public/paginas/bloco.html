@@ -1,46 +1,51 @@
 <main class="main" ng-controller="blocoController">
-  <div class="container layout_form">
-    <h1 class="titulo">Cadastrar Bloco</h1>
-    <article class="row formularios">
+    <div class="container layout_form">
+        <h1 class="titulo">Cadastrar Bloco</h1>
+        <article class="row formularios">
+            <div class="col-md-12">
+                <form class="form-group" name="blocoForm" novalidate>
+                    <p class="message" ng-show="blocoForm.$invalid && submitted"></p>
+                    <div class="form-group">
+                        <label class="control-label" for="letraBloco">Bloco: </label>
+                        <input class="form-control inputForm" type="text" name="letraBloco" id="letraBloco"
+                               maxlength="1" placeholder="Bloco" required
+                               ng-class="{'hasError' : blocoForm.bloco.$invalid && submitted}"
+                               ng-model="bloco.letraBloco"/>
+                    </div>
+                    <button class="btn btn-primary" type="submit" ng-click="addBloco()">Salvar</button>
+                    <button class="btn btn-primary" type="submit" ui-sref="unidade">Voltar</button>
+                </form>
+            </div>
+        </article>
+    </div>
 
-      <form>
-
-        <label class="control-label" for="numeroCasa">Letra do bloco: </label>
-        <input class="form-control inputForm" type="text"
-        maxlength="1"
-        placeholder="Letra do Bloco" ng-model="bloco.letraBloco"/>
-
-
-        <button class="btn btn-primary" type="submit" ng-click="addBloco()">Salvar</button>
-        <div class="form-group">
-          <a class="navbar-form" ui-sref="unidade">
-            <i class="material-icons">group</i>
-            <div>Voltar</div>
-          </div>
-              </div>
-        </form>
-        <table class="table table-striped">
+    <div class="list">
+        <h1 class="titulo">Consultar Bloco</h1>
+        <article class="row">
+            <div class="col-md-12 form-group">
+                <label class="control-label" for="pesquisa">Pesquisar: </label>
+                <input type="text" id="pesquisa" class="form-control inputSearch" placeholder="Pesquisar Bloco">
+            </div>
+            <div class="col-md-12">
+                <table class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Bloco </th>
-
+                        <th>Bloco</th>
+                        <th>Editar / Apagar</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr ng-repeat="bloco in blocos">
                         <td>{{bloco.letraBloco}}</td>
-
                         <td>
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-success">
-                                        <i class="button_list material-icons">find_in_page</i>
-                                    </button>
-                                    <button type="button" class="btn btn-warning">
+                                    <button type="button" class="btn btn-warning" ng-click="getCurrentBloco(bloco)">
                                         <i class="button_list material-icons">mode_edit</i>
                                     </button>
-                                    <button type="button" class="btn btn-danger">
-                                        <i class="button_list material-icons" ng-click="removeBloco(bloco.idBloco)">delete_forever</i>
+                                    <button type="button" class="btn btn-danger"
+                                            ng-click="deleteBloco(bloco.idBloco)">
+                                        <i class="button_list material-icons">delete_forever</i>
                                     </button>
                                 </div>
                             </form>
@@ -48,6 +53,7 @@
                     </tr>
                     </tbody>
                 </table>
-
-
-      </main>
+            </div>
+        </article>
+    </div>
+</main>

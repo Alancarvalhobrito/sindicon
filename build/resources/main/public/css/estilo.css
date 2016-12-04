@@ -125,14 +125,13 @@ body {
     width: 81%;
 }
 
-.inputFormHomeInline {
-    width: 32%;
+.inputFormInline {
+    width: 62%;
 }
 
-textarea{
-    background: red;
+.inputFormArea {
+    width: 102%;
 }
-
 /* Page - Section */
 #section {
     width: 88%;
@@ -210,3 +209,7 @@ textarea{
 }
 
 /* -----> Unidade <----- */
+#novoBloco{
+    height: 65px;
+    width: 30%;
+}

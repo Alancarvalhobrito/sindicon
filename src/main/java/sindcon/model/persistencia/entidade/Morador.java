@@ -1,8 +1,6 @@
 package sindcon.model.persistencia.entidade;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 @PrimaryKeyJoinColumn(name = "id_morador", referencedColumnName = "id_pessoa")

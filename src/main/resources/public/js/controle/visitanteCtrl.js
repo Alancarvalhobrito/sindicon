@@ -1,7 +1,8 @@
 angular.module('visitanteCtrl', [])
-    .controller('visitanteController', ['$scope', '$state', 'visitanteService', 'unidadeService', function ($scope, $state, visitanteService, unidadeService) {
+    .controller('visitanteController', ['$scope', '$state', 'visitanteService', 'unidadeService', 'blocoService', function ($scope, $state, visitanteService, unidadeService, blocoService) {
         $scope.visitantes = visitanteService.getVisitante();
         $scope.unidades = unidadeService.getUnidade();
+        $scope.blocos = blocoService.getBloco();
 
         $scope.addVisitante = function () {
             $scope.submitted = true;
@@ -45,5 +46,5 @@ angular.module('visitanteCtrl', [])
         };
         $scope.setEdit = function () {
             $scope.isEdit = false;
-        }
+        };
     }]);

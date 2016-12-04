@@ -2,9 +2,9 @@ angular.module('moradorService', ['ngResource'])
     .factory('moradorProxy', ['$resource', function ($resource) {
 
         var port = ':8080';
-        var serverURL = 'http://localhost'+port;
+        var serverURL = 'http://localhost' + port;
 
-        return $resource(serverURL+'/morador/',{}, {
+        return $resource(serverURL + '/morador/', {}, {
             save: {
                 method: 'POST',
                 isArray: false
@@ -22,7 +22,6 @@ angular.module('moradorService', ['ngResource'])
             },
             query: {
                 method: 'GET',
-
                 isArray: true
             }
         });
@@ -47,9 +46,7 @@ angular.module('moradorService', ['ngResource'])
             moradorProxy.update(morador, successCallback, error);
         };
 
-        self.removeMorador = function(idPessoa, successCallback, error) {
-                moradorProxy.delete({id: idPessoa}, successCallback, error);
-            }
-
-
+        self.removeMorador = function (idPessoa, successCallback, error) {
+            moradorProxy.delete({id: idPessoa}, successCallback, error);
+        }
     }]);

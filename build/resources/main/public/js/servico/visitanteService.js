@@ -22,7 +22,6 @@ angular.module('visitanteService', ['ngResource'])
             },
             query: {
                 method: 'GET',
-
                 isArray: true
             }
         });
