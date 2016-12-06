@@ -1,6 +1,7 @@
 <main class="main" ng-controller="funcionarioController">
+
     <div class="container layout_form">
-        <h1 class="titulo">Cadastrar Funcionários</h1>
+        <h1 class="titulo">Cadastrar Funcionário</h1>
         <article class="row formularios">
             <img class="col-md-3 img-rounded fotoForm" id="foto_funcionario" src="imagens/user/user0.jpg"/>
             <div class="col-md-9">
@@ -120,74 +121,78 @@
                                ng-model="funcionario.email"/>
                         <p class="obrigatorio" ng-show="funcionarioForm.email.$invalid && submitted"></p>
                     </div>
+                    <div class="form-group" ng-model="funcionario.ende">
 
-                   <!-- "Não foi implementado ainda"
-                   <div class="form-group">
-                        <label class="control-label" for="endereco">Endereço: </label>
-                        <input class="form-control inputForm" type="text" name="endereco" id="endereco" maxlength="40"
-                               placeholder="Endereço" required
-                               ng-class="{'hasError' : funcionarioForm.endereco.$invalid && submitted}"
-                               ng-model="funcionario.endereco"/>
-                        <p class="obrigatorio" ng-show="funcionarioForm.endereco.$invalid && submitted"></p>
-                    </div>
+                        <div class="form-group" ng-controller="enderecoController">
+                            <label class="control-label" for="endereco">Endereço: </label>
+                            <input class="form-control inputForm" type="text" name="endereco" id="endereco"
+                                   maxlength="40"
+                                   placeholder="Endereço" required
+                                   ng-class="{'hasError' : funcionarioForm.endereco.$invalid && submitted}"
+                                   ng-model="funcionario.endereco.endereco"/>
+                            <p class="obrigatorio" ng-show="funcionarioForm.endereco.$invalid && submitted"></p>
+                        </div>
 
-                    <div class="form-group">
-                        <label class="control-label" for="bairro">Bairro: </label>
-                        <input class="form-control inputForm" type="text" name="bairro" id="bairro" maxlength="20"
-                               placeholder="Bairro" ng-model="funcionario.bairro"/>
-                    </div>
+                        <div class="form-group" ng-controller="enderecoController">
+                            <label class="control-label" for="bairro">Bairro: </label>
+                            <input class="form-control inputForm" type="text" name="bairro" id="bairro" maxlength="20"
+                                   placeholder="Bairro" ng-model="funcionario.endereco.bairro"/>
+                        </div>
 
-                    <div class="form-group">
-                        <label class="control-label" for="cep">CEP: </label>
-                        <input class="form-control inputForm" type="text" name="cep" id="cep" maxlength="20"
-                               placeholder="CEP" ng-model="funcionario.cep"/>
-                    </div>
+                        <div class="form-group" ng-controller="enderecoController">
+                            <label class="control-label" for="cep">CEP: </label>
+                            <input class="form-control inputForm" type="text" name="cep" id="cep" maxlength="20"
+                                   placeholder="CEP" ng-model="funcionario.endereco.cep"/>
+                        </div>
 
-                    <div class="form-group">
-                        <label class="control-label" for="cidade">Cidade: </label>
-                        <select class="form-control inputForm" name="cidade" id="cidade" ng-model="funcionario.cidade">
-                            <option value="" disabled>Selecione</option>
-                            <option value="RF1">Riacho Fundo 1</option>
-                            <option value="GR1">Guará 1</option>
-                            <option value="SBO">São Sebastião</option>
-                        </select>
-                    </div>
+                        <div class="form-group" ng-controller="enderecoController">
+                            <label class="control-label" for="estado">Estado: </label>
+                            <select class="form-control inputForm" name="estado" id="estado"
+                                    ng-model="funcionario.endereco.estado">
+                                <option value="" disabled>Selecione</option>
+                                <option value="ac">Acre</option>
+                                <option value="al">Alagoas</option>
+                                <option value="am">Amazonas</option>
+                                <option value="ap">Amapá</option>
+                                <option value="ba">Bahia</option>
+                                <option value="ce">Ceará</option>
+                                <option value="df">Distrito Federal</option>
+                                <option value="es">Espírito Santo</option>
+                                <option value="go">Goiás</option>
+                                <option value="ma">Maranhão</option>
+                                <option value="mt">Mato Grosso</option>
+                                <option value="ms">Mato Grosso do Sul</option>
+                                <option value="mg">Minas Gerais</option>
+                                <option value="pa">Pará</option>
+                                <option value="pb">Paraíba</option>
+                                <option value="pr">Paraná</option>
+                                <option value="pe">Pernambuco</option>
+                                <option value="pi">Piauí</option>
+                                <option value="rj">Rio de Janeiro</option>
+                                <option value="rn">Rio Grande do Norte</option>
+                                <option value="ro">Rondônia</option>
+                                <option value="rs">Rio Grande do Sul</option>
+                                <option value="rr">Roraima</option>
+                                <option value="sc">Santa Catarina</option>
+                                <option value="se">Sergipe</option>
+                                <option value="sp">São Paulo</option>
+                                <option value="to">Tocantins</option>
+                            </select>
+                        </div>
 
-                    <div class="form-group">
-                        <label class="control-label" for="estado">Estado: </label>
-                        <select class="form-control inputForm" name="estado" id="estado" ng-model="funcionario.estado">
-                            <option value="" disabled>Selecione</option>
-                            <option value="ac">Acre</option>
-                            <option value="al">Alagoas</option>
-                            <option value="am">Amazonas</option>
-                            <option value="ap">Amapá</option>
-                            <option value="ba">Bahia</option>
-                            <option value="ce">Ceará</option>
-                            <option value="df">Distrito Federal</option>
-                            <option value="es">Espírito Santo</option>
-                            <option value="go">Goiás</option>
-                            <option value="ma">Maranhão</option>
-                            <option value="mt">Mato Grosso</option>
-                            <option value="ms">Mato Grosso do Sul</option>
-                            <option value="mg">Minas Gerais</option>
-                            <option value="pa">Pará</option>
-                            <option value="pb">Paraíba</option>
-                            <option value="pr">Paraná</option>
-                            <option value="pe">Pernambuco</option>
-                            <option value="pi">Piauí</option>
-                            <option value="rj">Rio de Janeiro</option>
-                            <option value="rn">Rio Grande do Norte</option>
-                            <option value="ro">Rondônia</option>
-                            <option value="rs">Rio Grande do Sul</option>
-                            <option value="rr">Roraima</option>
-                            <option value="sc">Santa Catarina</option>
-                            <option value="se">Sergipe</option>
-                            <option value="sp">São Paulo</option>
-                            <option value="to">Tocantins</option>
-                        </select>
-                    </div>-->
-                    <button class="btn btn-primary" type="submit" ng-click="addFuncionario()">Salvar</button>
-                    <button class="btn btn-primary" type="submit" ui-sref="home">Cancelar</button>
+                        <div class="form-group" ng-controller="enderecoController">
+                            <label class="control-label" for="cidade">Cidade: </label>
+                            <select class="form-control inputForm" name="cidade" id="cidade"
+                                    ng-model="funcionario.endereco.cidade">
+                                <option value="" disabled>Selecione</option>
+                                <option value="RF1">Riacho Fundo 1</option>
+                                <option value="GR1">Guará 1</option>
+                                <option value="SBO">São Sebastião</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary" type="submit" ng-click="addFuncionario()">Salvar</button>
+                        <button class="btn btn-primary" type="submit" ui-sref="home">Cancelar</button>
                 </form>
                 <p class="obrigatorio" ng-show="funcionarioForm.$invalid && submitted">* Os campos grifados são de
                     preenchimento obrigatório!</p>
@@ -233,7 +238,8 @@
                                     <button type="button" class="btn btn-success">
                                         <i class="button_list material-icons">find_in_page</i>
                                     </button>
-                                    <button type="button" class="btn btn-warning" ng-click="getCurrentFuncionario(funcionario)">
+                                    <button type="button" class="btn btn-warning"
+                                            ng-click="getCurrentFuncionario(funcionario)">
                                         <i class="button_list material-icons">mode_edit</i>
                                     </button>
                                     <button type="button" class="btn btn-danger"

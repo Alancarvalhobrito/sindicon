@@ -1,7 +1,7 @@
 angular.module('pessoaCtrl', [])
-    .controller('pessoaController', ['$scope', '$state', 'pessoaService', function ($scope, $state, pessoaService) {
+    .controller('pessoaController', ['$scope', '$state', 'pessoaService', 'enderecoService', function ($scope, $state, pessoaService, enderecoService) {
         $scope.pessoas = pessoaService.getPessoa();
-
+        $scope.enderecos = enderecoService.getEndereco();
         $scope.addPessoa = function () {
             $scope.submitted = true;
             console.log($scope.pessoa);

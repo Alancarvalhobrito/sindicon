@@ -14,6 +14,9 @@ angular.module('visitanteCtrl', [])
 
             visitanteService.createVisitante($scope.visitante, function () {
                 console.log(visitanteService.getVisitante());
+                $scope.visitantes = visitanteService.getVisitante();
+                $scope.unidades = unidadeService.getUnidade();
+                $scope.blocos = blocoService.getBloco();
             });
             $scope.message = true;
             $scope.visitante = {};
@@ -39,6 +42,9 @@ angular.module('visitanteCtrl', [])
         $scope.editVisitante = function () {
             visitanteService.updateVisitante($scope.visitante, function (data) {
                 console.log(visitanteService.getVisitante());
+                $scope.visitantes = visitanteService.getVisitante();
+                $scope.unidades = unidadeService.getUnidade();
+                $scope.blocos = blocoService.getBloco();
             });
 
             $scope.setEdit();

@@ -28,7 +28,7 @@ angular.module('unidadeService', ['ngResource'])
         });
 
     }])
-    .service('unidadeService', ['unidadeProxy', function (unidadeProxy) {
+                .service('unidadeService', ['unidadeProxy', function (unidadeProxy) {
         var self = this;
 
         self.getUnidade = function (unidade, successCallback, error) {
@@ -41,6 +41,7 @@ angular.module('unidadeService', ['ngResource'])
 
         self.createUnidade = function (unidade, successCallback, error) {
             unidadeProxy.save(unidade, successCallback, error);
+
         };
 
         self.updateUnidade = function (unidade, successCallback, error) {

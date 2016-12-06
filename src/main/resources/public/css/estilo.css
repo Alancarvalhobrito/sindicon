@@ -121,6 +121,10 @@ body {
     border-radius: 10px;
 }
 
+.tituloPrincipal{
+    text-align: center;
+}
+
 .inputFormHome {
     width: 81%;
 }

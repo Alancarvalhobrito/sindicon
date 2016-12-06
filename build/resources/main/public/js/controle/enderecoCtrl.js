@@ -1,8 +1,9 @@
 angular.module('enderecoCtrl', [])
-    .controller('enderecoController', ['$scope', '$state', 'enderecoService', function ($scope, $state, enderecoService) {
+    .controller('enderecoController', ['$scope', '$state', 'enderecoService', 'pessoaService', function ($scope, $state, enderecoService, pessoaService) {
         $scope.enderecos = enderecoService.getEndereco();
+        $scope.pessoas = pessoaService.getPessoa();
 
-        $scope.addEndereco = function () {
+        $scope.addEndereco = function (endereco) {
             $scope.submitted = true;
             console.log($scope.endereco);
 

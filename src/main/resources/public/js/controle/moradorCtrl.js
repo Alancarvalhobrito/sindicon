@@ -14,6 +14,9 @@ angular.module('moradorCtrl', [])
 
             moradorService.createMorador($scope.morador, function () {
                 console.log(moradorService.getMorador());
+                $scope.moradores = moradorService.getMorador();
+                $scope.unidades = unidadeService.getUnidade();
+                $scope.blocos = blocoService.getBloco();
             });
             $scope.message = true;
             $scope.morador = {};
@@ -22,6 +25,7 @@ angular.module('moradorCtrl', [])
                 $scope.message = false;
             };
         };
+
 
         $scope.deleteMorador = function (morador) {
             moradorService.removeMorador(morador, function (data) {
@@ -39,6 +43,9 @@ angular.module('moradorCtrl', [])
         $scope.editMorador = function () {
             moradorService.updateMorador($scope.morador, function (data) {
                 console.log(moradorService.getMorador());
+                $scope.moradores = moradorService.getMorador();
+                $scope.unidades = unidadeService.getUnidade();
+                $scope.blocos = blocoService.getBloco();
             });
 
             $scope.setEdit();

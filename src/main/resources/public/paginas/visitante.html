@@ -122,7 +122,8 @@
                         <th>CPF</th>
                         <th>Bloco</th>
                         <th>Casa</th>
-                        <th>Editar / Apagar</th>
+                        <th>Observação</th>
+                        <th>Visualizar/Editar/Apagar</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -136,6 +137,9 @@
                         <td>{{visitante.observacao}}</td>
                         <td>
                             <form class="form-inline">
+                                <button type="button" class="btn btn-success">
+                                    <i class="button_list material-icons">find_in_page</i>
+                                </button>
                                 <div class="form-group">
                                     <button type="button" class="btn btn-warning" ng-click="getCurrentVisitante(visitante)">
                                         <i class="button_list material-icons">mode_edit</i>

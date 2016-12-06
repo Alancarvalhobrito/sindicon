@@ -29,44 +29,11 @@
                     <button class="btn btn-primary" type="submit" name="botao-relatorio">Imprimir</button>
                     <button class="btn btn-primary" type="submit" ui-sref="home">Cancelar</button>
                 </form>
-
             </div>
         </article>
-    </div>
 
-    <div class="list">
-        <h1 class="titulo">Consultar Relatório</h1>
-        <article class="row">
-            <div class="col-md-12">
-                <table class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>RG</th>
-                        <th>UF</th>
-                        <th>CPF</th>
-                        <th>Telefone</th>
-                        <th>Celular</th>
-                        <th>Email</th>
-                        <th>Bloco</th>
-                        <th>Casa</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="morador in moradores">
-                        <td>{{morador.nome}}</td>
-                        <td>{{morador.rg}}</td>
-                        <td>{{morador.ufRg}}</td>
-                        <td>{{morador.cpf}}</td>
-                        <td>{{morador.telefoneFixo}}</td>
-                        <td>{{morador.telefoneMovel}}</td>
-                        <td>{{morador.email}}</td>
-                        <td>{{morador.unidade.bloco.letraBloco}}</td>
-                        <td>{{morador.unidade.numeroCasa}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </article>
+        <div class="list">
+            <h1 class="titulo">Consultar Relatório</h1>
+        </div>
     </div>
 </main>

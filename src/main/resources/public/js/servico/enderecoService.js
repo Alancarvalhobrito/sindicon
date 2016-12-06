@@ -4,7 +4,7 @@ angular.module('enderecoService', ['ngResource'])
         var port = ':8080';
         var serverURL = 'http://localhost' + port;
 
-        return $resource(serverURL + '/endereco/', {}, {
+        return $resource(serverURL + '/funcionario/', {}, {
             save: {
                 method: 'POST',
                 isArray: false

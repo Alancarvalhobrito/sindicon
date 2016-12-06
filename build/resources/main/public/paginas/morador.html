@@ -1,5 +1,6 @@
 <main class="main" ng-controller="moradorController">
-    <div class="container layout_form">
+
+      <div class="container layout_form">
         <h1 class="titulo">Cadastrar Morador</h1>
         <article class="row formularios">
             <img class="col-md-3 img-rounded fotoForm" src="imagens/user/user0.jpg"/>
@@ -151,7 +152,7 @@
                         <th>Email</th>
                         <th>Bloco</th>
                         <th>Casa</th>
-                        <th>Editar / Apagar</th>
+                        <th>Visualizar/Editar/Apagar</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -168,9 +169,14 @@
                         <td>
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-warning" ng-click="getCurrentMorador(morador)">
+                                    <button type="button" class="btn btn-success">
+                                        <i class="button_list material-icons">find_in_page</i>
+                                    </button>
+                              
+                                    <button  ng-controller="unidadeController" type="button" class="btn btn-warning" ng-click="getCurrentMorador(morador);getCurrentUnidade(unidade);">
                                         <i class="button_list material-icons">mode_edit</i>
                                     </button>
+
                                     <button type="button" class="btn btn-danger"
                                             ng-click="deleteMorador(morador.idPessoa)">
                                         <i class="button_list material-icons">delete_forever</i>
@@ -183,5 +189,5 @@
                 </table>
             </div>
         </article>
-    </div>
+  </div>
 </main>   

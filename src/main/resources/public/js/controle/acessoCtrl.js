@@ -4,6 +4,7 @@ angular.module('acessoCtrl', [])
 
         $scope.addAcesso = function () {
             $scope.submitted = true;
+            $scope.acesso = {};
             console.log($scope.acesso);
 
             acessoService.createAcesso($scope.acesso, function () {

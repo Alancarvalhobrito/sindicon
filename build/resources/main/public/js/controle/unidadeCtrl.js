@@ -14,6 +14,8 @@ app.controller('unidadeController', ['$scope', '$state', 'unidadeService', 'mora
 
         unidadeService.createUnidade($scope.unidade, function () {
             console.log(unidadeService.getUnidade());
+            $scope.unidades = unidadeService.getUnidade();
+            $scope.blocos = blocoService.getBloco();
         });
         $scope.message = true;
         $scope.unidade = {};
@@ -29,7 +31,6 @@ app.controller('unidadeController', ['$scope', '$state', 'unidadeService', 'mora
         });
         $scope.unidades = unidadeService.getUnidade();
     };
-
     $scope.getCurrentUnidade = function (dataUnidade) {
         $scope.isEdit = true;
         var data = dataUnidade;
@@ -39,6 +40,8 @@ app.controller('unidadeController', ['$scope', '$state', 'unidadeService', 'mora
     $scope.editUnidade = function () {
         unidadeService.updateUnidade($scope.unidade, function (data) {
             console.log(unidadeService.getUnidade());
+            $scope.unidades = unidadeService.getUnidade();
+            $scope.blocos = blocoService.getBloco();
         });
 
         $scope.setEdit();
@@ -53,11 +56,13 @@ app.filter('secondDropdown', function () {
         var filtered = [];
         if (firstSelect === null) {
             return filtered;
-        };
+        }
+        ;
         angular.forEach(secondSelect, function (s2) {
             if (s2.bloco.idBloco == firstSelect) {
                 filtered.push(s2);
-            };
+            }
+            ;
         });
         return filtered;
     };
