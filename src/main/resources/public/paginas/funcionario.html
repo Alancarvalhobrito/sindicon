@@ -148,7 +148,7 @@
                         <div class="form-group" ng-controller="enderecoController">
                             <label class="control-label" for="estado">Estado: </label>
                             <select class="form-control inputForm" name="estado" id="estado"
-                                    ng-model="funcionario.endereco.estado">
+                                    ng-model="funcionario.endereco.uf">
                                 <option value="" disabled>Selecione</option>
                                 <option value="ac">Acre</option>
                                 <option value="al">Alagoas</option>
@@ -191,7 +191,7 @@
                             </select>
                         </div>
 
-                        <button class="btn btn-primary" type="submit" ng-click="addFuncionario()">Salvar</button>
+                        <button class="btn btn-primary" type="submit" ng-click="addFuncionario(funcionario)">Salvar</button>
                         <button class="btn btn-primary" type="submit" ui-sref="home">Cancelar</button>
                 </form>
                 <p class="obrigatorio" ng-show="funcionarioForm.$invalid && submitted">* Os campos grifados são de

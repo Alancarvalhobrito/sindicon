@@ -1,11 +1,13 @@
 package sindcon.model.servico;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sindcon.model.persistencia.entidade.Endereco;
 import sindcon.model.persistencia.repositorio.EnderecoRepositorio;
 
 @Service
 public class EnderecoServico {
+    @Autowired
     EnderecoRepositorio enderecoRepositorio;
 
     //GET
