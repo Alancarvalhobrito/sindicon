@@ -2,8 +2,8 @@
     <div id="home">
         <!-- Sidebar -->
         <aside id="sidebar">
-            <img class="cancela" src="imagens/cancela_fechada.png">
-            <img class="cancela" src="imagens/cancela_aberta.png"/>
+            <img class="cancela" src="imagens/cancela_fechada.jpg">
+            <img class="cancela" src="imagens/cancela_aberta.jpg"/>
         </aside>
         <!-- Section -->
         <section id="section">
@@ -35,7 +35,8 @@
                         <div class="col-md-6">
                             <div class="row form-group">
                                 <label class="col-md-4 control-label" for="rg">RG </label>
-                                <input class="col-md-8 inputFormInline form-control" type="text" name="rg" id="rg"
+                                <input class="col-md-8 inputFormInline form-control" type="tel" name="rg" id="rg"
+                                <input class="col-md-8 inputFormInline form-control" type="tel" name="rg" id="rg"
                                        maxlength="30"
                                        placeholder="Registro Geral" required
                                        ng-class="{'hasError' : visitanteForm.rg.$invalid && submitted}"
@@ -85,7 +86,7 @@
 
                     <div class="row form-group">
                         <label class="col-md-2 control-label" for="cpf">CPF </label>
-                        <input class="col-md-10 form-control inputFormHome" type="text" name="cpf" id="cpf"
+                        <input class="col-md-10 form-control inputFormHome" type="tel" name="cpf" id="cpf"
                                maxlength="11"
                                placeholder="CPF" required
                                ng-class="{'hasError' : visitanteForm.cpf.$invalid && submitted}"

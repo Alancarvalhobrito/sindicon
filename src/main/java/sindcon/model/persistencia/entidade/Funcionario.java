@@ -16,7 +16,6 @@ public class Funcionario extends Pessoa {
     private Collection<Usuario> usuarios;
 
     //Gets e Sets:
-
     public String getCargo() {
         return cargo;
     }

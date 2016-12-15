@@ -110,7 +110,7 @@
         <article class="row">
             <div class="col-md-12 form-group">
                 <label class="control-label" for="pesquisa">Pesquisar: </label>
-                <input type="text" id="pesquisa" class="form-control inputSearch" placeholder="Pesquisar Visitante">
+                <input type="text" id="pesquisa" class="form-control inputSearch" ng-model="searchVisitante" >
             </div>
             <div class="col-md-12">
                 <table class="table table-striped">
@@ -123,11 +123,11 @@
                         <th>Bloco</th>
                         <th>Casa</th>
                         <th>Observação</th>
-                        <th>Visualizar/Editar/Apagar</th>
+                        <th>Editar/Apagar</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="visitante in visitantes">
+                    <tr ng-repeat="visitante in visitantes | filter: searchVisitante | orderBy:visitante.nome">
                         <td>{{visitante.nome}}</td>
                         <td>{{visitante.rg}}</td>
                         <td>{{visitante.ufRg}}</td>
@@ -137,11 +137,9 @@
                         <td>{{visitante.observacao}}</td>
                         <td>
                             <form class="form-inline">
-                                <button type="button" class="btn btn-success">
-                                    <i class="button_list material-icons">find_in_page</i>
-                                </button>
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-warning" ng-click="getCurrentVisitante(visitante)">
+                                    <button type="button" class="btn btn-warning"
+                                            ng-click="getCurrentVisitante(visitante)">
                                         <i class="button_list material-icons">mode_edit</i>
                                     </button>
                                     <button type="button" class="btn btn-danger"

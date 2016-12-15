@@ -1,6 +1,5 @@
 <main class="main" ng-controller="moradorController">
-
-      <div class="container layout_form">
+    <div class="container layout_form">
         <h1 class="titulo">Cadastrar Morador</h1>
         <article class="row formularios">
             <img class="col-md-3 img-rounded fotoForm" src="imagens/user/user0.jpg"/>
@@ -19,7 +18,7 @@
 
                     <div class="form-group">
                         <label class="control-label" for="rg">RG: </label>
-                        <input class="form-control inputForm" type="text" name="rg" id="rg" maxlength="20"
+                        <input class="form-control inputForm" type="tel" name="rg" id="rg" maxlength="20"
                                placeholder="Registro Geral" required
                                ng-class="{'hasError' : moradorForm.rg.$invalid && submitted}"
                                ng-model="morador.rg"/>
@@ -64,7 +63,7 @@
 
                     <div class="form-group">
                         <label class="control-label" for="cpf">CPF: </label>
-                        <input class="form-control inputForm" type="text" name="cpf" id="cpf" maxlength="11"
+                        <input class="form-control inputForm" type="tel" name="cpf" id="cpf" maxlength="11"
                                placeholder="CPF" required
                                ng-class="{'hasError' : moradorForm.cpf.$invalid && submitted}"
                                ng-model="morador.cpf"/>
@@ -74,7 +73,7 @@
                     <div class="form-group">
                         <label class="control-label" for="telefoneFixo">Telefone: </label>
                         <input class="form-control inputForm" type="tel" name="telefoneFixo" id="telefoneFixo"
-                               maxlength="10"
+                               maxlength="11"
                                placeholder="Telefone" required
                                ng-class="{'hasError' : moradorForm.telefoneFixo.$invalid && submitted}"
                                ng-model="morador.telefoneFixo"/>
@@ -84,8 +83,8 @@
                     <div class="form-group">
                         <label class="control-label" for="telefoneMovel">Celular: </label>
                         <input class="form-control inputForm" type="tel" name="telefoneMovel" id="telefoneMovel"
-                               maxlength="10"
-                               placeholder="Ceular" required
+                               maxlength="11"
+                               placeholder="Celular" required
                                ng-class="{'hasError' : moradorForm.telefoneMovel.$invalid && submitted}"
                                ng-model="morador.telefoneMovel"/>
                         <p class="obrigatorio" ng-show="moradorForm.telefoneMovel.$invalid && submitted"></p>
@@ -137,7 +136,7 @@
         <article class="row">
             <div class="col-md-12 form-group">
                 <label class="control-label" for="pesquisa">Pesquisar: </label>
-                <input type="text" id="pesquisa" class="form-control inputSearch" placeholder="Pesquisar Morador">
+                <input type="text" id="pesquisa" class="form-control inputSearch" ng-model="searchMorador" >
             </div>
             <div class="col-md-12">
                 <table class="table table-striped">
@@ -152,11 +151,11 @@
                         <th>Email</th>
                         <th>Bloco</th>
                         <th>Casa</th>
-                        <th>Visualizar/Editar/Apagar</th>
+                        <th>Editar/Apagar</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="morador in moradores">
+                    <tr ng-repeat="morador in moradores | filter: searchMorador | orderBy:morador.nome">
                         <td>{{morador.nome}}</td>
                         <td>{{morador.rg}}</td>
                         <td>{{morador.ufRg}}</td>
@@ -169,11 +168,9 @@
                         <td>
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-success">
-                                        <i class="button_list material-icons">find_in_page</i>
-                                    </button>
-                              
-                                    <button  ng-controller="unidadeController" type="button" class="btn btn-warning" ng-click="getCurrentMorador(morador);getCurrentUnidade(unidade);">
+
+                                    <button ng-controller="unidadeController" type="button" class="btn btn-warning"
+                                            ng-click="getCurrentMorador(morador);getCurrentUnidade(unidade);">
                                         <i class="button_list material-icons">mode_edit</i>
                                     </button>
 
@@ -189,5 +186,5 @@
                 </table>
             </div>
         </article>
-  </div>
+    </div>
 </main>   

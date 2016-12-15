@@ -15,8 +15,6 @@ angular.module('moradorCtrl', [])
             moradorService.createMorador($scope.morador, function () {
                 console.log(moradorService.getMorador());
                 $scope.moradores = moradorService.getMorador();
-                $scope.unidades = unidadeService.getUnidade();
-                $scope.blocos = blocoService.getBloco();
             });
             $scope.message = true;
             $scope.morador = {};
